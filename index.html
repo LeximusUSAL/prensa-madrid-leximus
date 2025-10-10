@@ -260,6 +260,24 @@
             border-radius: 5px;
         }
 
+        .btn-readme {
+            display: inline-block;
+            background: linear-gradient(135deg, #008a9b 0%, #00a0b4 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,138,155,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-readme:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,138,155,0.5);
+            background: linear-gradient(135deg, #00a0b4 0%, #008a9b 100%);
+        }
+
         @media (max-width: 768px) {
             .timeline-item {
                 flex-direction: column;
@@ -553,6 +571,67 @@
                 <p><strong>1931</strong> marca el año de proclamación de la Segunda República Española (14 de abril de 1931), lo que explica el auge de nuevas publicaciones y la máxima actividad periodística en Madrid.</p>
                 <p style="margin-top: 15px;"><strong>Crisol</strong> (04/04/1931 - 06/01/1932) fue un periódico republicano de corta vida que define exactamente el período de máxima coincidencia, siendo el último en comenzar y el primero en cerrar.</p>
                 <p style="margin-top: 15px;"><strong>1936-1939</strong> ve el cierre masivo de periódicos debido a la Guerra Civil Española, con casi todos cesando publicación en marzo de 1939.</p>
+            </div>
+
+            <!-- Scripts y Metodología -->
+            <div class="glass-card" style="margin-top: 40px;">
+                <h2 class="section-title">🛠️ Scripts y Metodología</h2>
+
+                <div style="margin-bottom: 30px;">
+                    <h3 style="color: #006d7a; font-size: 1.4em; margin-bottom: 15px;">📂 Código Fuente Disponible</h3>
+                    <p style="color: #475569; line-height: 1.8; margin-bottom: 15px;">
+                        Todo el código utilizado para este análisis está disponible en el repositorio de GitHub:
+                    </p>
+                    <div style="background: #f8fafc; padding: 20px; border-radius: 12px; border-left: 5px solid #008a9b;">
+                        <p style="margin-bottom: 10px;"><strong>📦 Repositorio:</strong> <a href="https://github.com/LeximusUSAL/prensa-madrid-leximus" target="_blank" style="color: #008a9b; text-decoration: none; font-weight: 600;">github.com/LeximusUSAL/prensa-madrid-leximus</a></p>
+                        <p style="margin-bottom: 10px;"><strong>📄 Script principal:</strong> <a href="https://github.com/LeximusUSAL/prensa-madrid-leximus/blob/main/scripts/analisis_cronologico_periodicos_madrid.py" target="_blank" style="color: #008a9b; text-decoration: none;">analisis_cronologico_periodicos_madrid.py</a></p>
+                        <p><strong>📊 Datos JSON:</strong> <a href="https://github.com/LeximusUSAL/prensa-madrid-leximus/blob/main/resultados/analisis_cronologico_periodicos_madrid.json" target="_blank" style="color: #008a9b; text-decoration: none;">analisis_cronologico_periodicos_madrid.json</a></p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 30px;">
+                    <h3 style="color: #006d7a; font-size: 1.4em; margin-bottom: 15px;">⚠️ Limitaciones Reconocidas</h3>
+                    <div style="background: rgba(255,193,7,0.1); padding: 25px; border-radius: 12px; border-left: 5px solid #ffc107;">
+                        <p style="color: #1e293b; font-weight: 600; margin-bottom: 15px; font-size: 1.1em;">Errores de OCR:</p>
+                        <p style="color: #475569; line-height: 1.8; margin-bottom: 10px;">
+                            Los textos digitalizados por la BNE presentan errores de reconocimiento óptico de caracteres (OCR), especialmente en:
+                        </p>
+                        <ul style="color: #475569; line-height: 1.8; margin-left: 20px; margin-top: 10px;">
+                            <li>Tipografías antiguas del siglo XIX</li>
+                            <li>Páginas deterioradas o mal conservadas</li>
+                            <li>Formatos de columnas complejos</li>
+                            <li>Caracteres especiales y acentuación</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #006d7a; font-size: 1.4em; margin-bottom: 15px;">✅ Compensación por Volumen</h3>
+                    <div style="background: rgba(0,138,155,0.1); padding: 25px; border-radius: 12px; border-left: 5px solid #008a9b;">
+                        <p style="color: #1e293b; margin-bottom: 15px; line-height: 1.8;">
+                            A pesar de estas limitaciones, consideramos que el análisis es válido por:
+                        </p>
+                        <ul style="color: #475569; line-height: 1.8; margin-left: 20px;">
+                            <li><strong>Enorme volumen de datos:</strong> 102,466 ejemplares digitalizados</li>
+                            <li><strong>Análisis sistemático:</strong> Procesamiento uniforme de todo el corpus</li>
+                            <li><strong>Representatividad estadística significativa:</strong> Los errores se diluyen en el volumen</li>
+                            <li><strong>Patrones generales:</strong> Las tendencias macro trascienden errores individuales</li>
+                        </ul>
+                        <p style="color: #475569; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(0,138,155,0.2); font-style: italic;">
+                            <strong>Nota:</strong> Los resultados deberán ser revisados y contrastados cuando la Hemeroteca de la BNE mejore el OCR de sus fuentes digitalizadas.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #006d7a; font-size: 1.4em; margin-bottom: 15px;">📖 Documentación Completa</h3>
+                    <p style="color: #475569; line-height: 1.8; margin-bottom: 15px;">
+                        Para más detalles sobre la metodología, consulta la documentación completa en:
+                    </p>
+                    <a href="https://github.com/LeximusUSAL/prensa-madrid-leximus/blob/main/README.md" target="_blank" class="btn-readme">
+                        📄 Ver README completo
+                    </a>
+                </div>
             </div>
         </div>
 
