@@ -13,11 +13,11 @@ import json
 periodicos = {
     "El Sol": {"inicio": "29/11/1917", "fin": "27/03/1939", "ejemplares": 5972},
     "Crisol": {"inicio": "04/04/1931", "fin": "06/01/1932", "ejemplares": 202},
-    "El Heraldo de Madrid": {"inicio": "29/10/1890", "fin": "26/03/1939", "ejemplares": None},
+    "El Heraldo de Madrid": {"inicio": "29/10/1890", "fin": "26/03/1939", "ejemplares": 15583},
     "El Imparcial": {"inicio": "01/01/1867", "fin": "30/05/1933", "ejemplares": 23008},
-    "El Liberal": {"inicio": "15/07/1879", "fin": "26/03/1939", "ejemplares": None},
-    "La Época": {"inicio": "01/04/1849", "fin": "31/03/1936", "ejemplares": None},
-    "La Libertad (1919)": {"inicio": "21/12/1919", "fin": "26/03/1939", "ejemplares": None},
+    "El Liberal": {"inicio": "15/07/1879", "fin": "26/03/1939", "ejemplares": 19840},
+    "La Época": {"inicio": "01/04/1849", "fin": "31/03/1936", "ejemplares": 28854},
+    "La Libertad (1919)": {"inicio": "21/12/1919", "fin": "26/03/1939", "ejemplares": 5902},
     "La Nación": {"inicio": "19/10/1925", "fin": "13/03/1936", "ejemplares": 3105}
 }
 
@@ -98,7 +98,7 @@ print(f"{'TOTAL':25} | {'':30} | {'':12} | {total_ejemplares:>10,}")
 print("=" * 100)
 print()
 print(f"📊 RESUMEN DE EJEMPLARES DIGITALIZADOS:")
-print(f"   - Periódicos con datos: 4 de 8")
+print(f"   - Periódicos con datos: 8 de 8 (100%)")
 print(f"   - Total de ejemplares contabilizados: {total_ejemplares:,}")
 print()
 print("=" * 100)

@@ -22,7 +22,7 @@
       "inicio": "29/10/1890",
       "fin": "26/03/1939",
       "duracion_anios": 48.4,
-      "ejemplares": null
+      "ejemplares": 15583
     },
     "El Imparcial": {
       "inicio": "01/01/1867",
@@ -34,19 +34,19 @@
       "inicio": "15/07/1879",
       "fin": "26/03/1939",
       "duracion_anios": 59.7,
-      "ejemplares": null
+      "ejemplares": 19840
     },
     "La Época": {
       "inicio": "01/04/1849",
       "fin": "31/03/1936",
       "duracion_anios": 87.0,
-      "ejemplares": null
+      "ejemplares": 28854
     },
     "La Libertad (1919)": {
       "inicio": "21/12/1919",
       "fin": "26/03/1939",
       "duracion_anios": 19.3,
-      "ejemplares": null
+      "ejemplares": 5902
     },
     "La Nación": {
       "inicio": "19/10/1925",
@@ -55,8 +55,8 @@
       "ejemplares": 3105
     }
   },
-  "total_ejemplares_digitalizados": 32287,
-  "periodicos_con_ejemplares": 4,
+  "total_ejemplares_digitalizados": 102466,
+  "periodicos_con_ejemplares": 8,
   "periodo_maxima_coincidencia": {
     "nivel_coincidencia": 8,
     "inicio": "01/01/1931",

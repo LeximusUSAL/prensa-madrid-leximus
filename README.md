@@ -26,12 +26,12 @@ A diferencia de nuestro análisis previo de **revistas musicales especializadas*
 
 | Periódico | Período de Publicación | Duración | Ejemplares Digitalizados |
 |-----------|------------------------|----------|-------------------------|
-| **La Época** | 01/04/1849 - 31/03/1936 | 87.0 años | N/D |
+| **La Época** | 01/04/1849 - 31/03/1936 | 87.0 años | **28,854** |
 | **El Imparcial** | 01/01/1867 - 30/05/1933 | 66.4 años | **23,008** |
-| **El Liberal** | 15/07/1879 - 26/03/1939 | 59.7 años | N/D |
-| **El Heraldo de Madrid** | 29/10/1890 - 26/03/1939 | 48.4 años | N/D |
+| **El Liberal** | 15/07/1879 - 26/03/1939 | 59.7 años | **19,840** |
+| **El Heraldo de Madrid** | 29/10/1890 - 26/03/1939 | 48.4 años | **15,583** |
 | **El Sol** | 29/11/1917 - 27/03/1939 | 21.3 años | **5,972** |
-| **La Libertad** | 21/12/1919 - 26/03/1939 | 19.3 años | N/D |
+| **La Libertad** | 21/12/1919 - 26/03/1939 | 19.3 años | **5,902** |
 | **La Nación** | 19/10/1925 - 13/03/1936 | 10.4 años | **3,105** |
 | **Crisol** | 04/04/1931 - 06/01/1932 | 0.8 años | **202** |
 
@@ -39,7 +39,7 @@ A diferencia de nuestro análisis previo de **revistas musicales especializadas*
 
 - **Total de periódicos**: 8
 - **Arco cronológico completo**: 1849-1939 (90 años)
-- **Ejemplares digitalizados contabilizados**: **32,287** (4 periódicos)
+- **Ejemplares digitalizados totales**: **102,466** (8 periódicos, 100% del corpus)
 - **Período de máxima coincidencia**: Abril 1931 - Enero 1932 (9 meses, 8 periódicos activos)
 - **Contexto histórico clave**: Segunda República Española (1931)
 
@@ -60,7 +60,7 @@ Los archivos TXT fueron obtenidos de la **Biblioteca Nacional de España (BNE)**
 ### ✅ Compensación por Volumen
 
 A pesar de estas limitaciones, consideramos que el análisis es válido por:
-- **Enorme volumen de datos** (32,287+ ejemplares)
+- **Enorme volumen de datos** (102,466 ejemplares)
 - **Análisis sistemático** de todo el corpus
 - **Representatividad estadística significativa**
 - **Patrones generales** que trascienden errores individuales
