@@ -1,0 +1,76 @@
+{
+  "total_periodicos": 8,
+  "arco_cronologico_completo": {
+    "inicio": "01/04/1849",
+    "fin": "27/03/1939",
+    "duracion_anios": 90.0
+  },
+  "periodicos": {
+    "El Sol": {
+      "inicio": "29/11/1917",
+      "fin": "27/03/1939",
+      "duracion_anios": 21.3,
+      "ejemplares": 5972
+    },
+    "Crisol": {
+      "inicio": "04/04/1931",
+      "fin": "06/01/1932",
+      "duracion_anios": 0.8,
+      "ejemplares": 202
+    },
+    "El Heraldo de Madrid": {
+      "inicio": "29/10/1890",
+      "fin": "26/03/1939",
+      "duracion_anios": 48.4,
+      "ejemplares": null
+    },
+    "El Imparcial": {
+      "inicio": "01/01/1867",
+      "fin": "30/05/1933",
+      "duracion_anios": 66.4,
+      "ejemplares": 23008
+    },
+    "El Liberal": {
+      "inicio": "15/07/1879",
+      "fin": "26/03/1939",
+      "duracion_anios": 59.7,
+      "ejemplares": null
+    },
+    "La Época": {
+      "inicio": "01/04/1849",
+      "fin": "31/03/1936",
+      "duracion_anios": 87.0,
+      "ejemplares": null
+    },
+    "La Libertad (1919)": {
+      "inicio": "21/12/1919",
+      "fin": "26/03/1939",
+      "duracion_anios": 19.3,
+      "ejemplares": null
+    },
+    "La Nación": {
+      "inicio": "19/10/1925",
+      "fin": "13/03/1936",
+      "duracion_anios": 10.4,
+      "ejemplares": 3105
+    }
+  },
+  "total_ejemplares_digitalizados": 32287,
+  "periodicos_con_ejemplares": 4,
+  "periodo_maxima_coincidencia": {
+    "nivel_coincidencia": 8,
+    "inicio": "01/01/1931",
+    "fin": "31/12/1931",
+    "duracion_anios": 1,
+    "periodicos_activos": [
+      "Crisol",
+      "El Heraldo de Madrid",
+      "El Imparcial",
+      "El Liberal",
+      "El Sol",
+      "La Libertad (1919)",
+      "La Nación",
+      "La Época"
+    ]
+  }
+}

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Cronológico - Periódicos de Madrid (1849-1939)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .summary-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .summary-box h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+
+        .highlight-stat {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .timeline-section {
+            margin-top: 40px;
+        }
+
+        .timeline-section h2 {
+            font-size: 2em;
+            color: #1e3c72;
+            margin-bottom: 30px;
+            border-left: 5px solid #f5576c;
+            padding-left: 15px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .periodico-name {
+            font-weight: bold;
+            min-width: 250px;
+            font-size: 1.1em;
+            color: #1e3c72;
+        }
+
+        .timeline-bar {
+            flex: 1;
+            height: 40px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            color: white;
+            font-size: 0.85em;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-bar:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .duration {
+            margin-left: auto;
+            font-weight: bold;
+            background: rgba(255,255,255,0.3);
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+
+        .coincidence-section {
+            margin-top: 40px;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .coincidence-section h2 {
+            font-size: 2em;
+            color: #1e3c72;
+            margin-bottom: 20px;
+        }
+
+        .coincidence-level {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            border-left: 5px solid #667eea;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .coincidence-level h3 {
+            color: #2a5298;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .period-range {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.95em;
+        }
+
+        .max-coincidence {
+            background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .max-coincidence h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+
+        .periodico-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .periodico-active {
+            background: rgba(255,255,255,0.2);
+            padding: 12px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .check-icon {
+            font-size: 1.3em;
+        }
+
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .legend {
+            margin-top: 30px;
+            padding: 20px;
+            background: #e3f2fd;
+            border-radius: 8px;
+            border-left: 5px solid #2196f3;
+        }
+
+        .legend h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+        }
+
+        .legend-item {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .color-box {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .periodico-name {
+                min-width: auto;
+            }
+
+            .timeline-bar {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📰 Análisis Cronológico de Periódicos de Madrid</h1>
+            <p class="subtitle">Prensa madrileña (1849-1939) | Proyecto LexiMus</p>
+        </header>
+
+        <div class="content">
+            <!-- Resumen ejecutivo -->
+            <div class="summary-box">
+                <h2>🎯 Hallazgos Principales</h2>
+                <div class="highlight-stat">
+                    <div class="stat-card">
+                        <span class="stat-label">Período de coincidencia total</span>
+                        <span class="stat-value">9 meses</span>
+                        <span class="stat-label">04/04/1931 - 06/01/1932</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Periódicos simultáneos</span>
+                        <span class="stat-value">8</span>
+                        <span class="stat-label">Todos activos en 1931</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Arco cronológico total</span>
+                        <span class="stat-value">90 años</span>
+                        <span class="stat-label">1849 - 1939</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Periódico más longevo</span>
+                        <span class="stat-value">87 años</span>
+                        <span class="stat-label">La Época (1849-1936)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Línea de tiempo visual -->
+            <div class="timeline-section">
+                <h2>📅 Arco Cronológico por Periódico</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="periodico-name">La Época</div>
+                        <div class="timeline-bar" style="background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);">
+                            <span>01/04/1849 - 31/03/1936</span>
+                            <span class="duration">87.0 años</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="periodico-name">El Imparcial</div>
+                        <div class="timeline-bar" style="background: linear-gradient(90deg, #134E5E 0%, #71B280 100%);">
+                            <span>01/01/1867 - 30/05/1933</span>
+                            <span class="duration">66.4 años</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="periodico-name">El Liberal</div>
+                        <div class="timeline-bar" style="background: linear-gradient(90deg, #c31432 0%, #240b36 100%);">
+                            <span>15/07/1879 - 26/03/1939</span>
+                            <span class="duration">59.7 años</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="periodico-name">El Heraldo de Madrid</div>
+                        <div class="timeline-bar" style="background: linear-gradient(90deg, #DD5E89 0%, #F7BB97 100%);">
+                            <span>29/10/1890 - 26/03/1939</span>
+                            <span class="duration">48.4 años</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="periodico-name">El Sol</div>
+                        <div class="timeline-bar" style="background: linear-gradient(90deg, #f46b45 0%, #eea849 100%);">
+                            <span>29/11/1917 - 27/03/1939</span>
+                            <span class="duration">21.3 años</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="periodico-name">La Libertad (1919)</div>
+                        <div class="timeline-bar" style="background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%);">
+                            <span>21/12/1919 - 26/03/1939</span>
+                            <span class="duration">19.3 años</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="periodico-name">La Nación</div>
+                        <div class="timeline-bar" style="background: linear-gradient(90deg, #ad5389 0%, #3c1053 100%);">
+                            <span>19/10/1925 - 13/03/1936</span>
+                            <span class="duration">10.4 años</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="periodico-name">Crisol</div>
+                        <div class="timeline-bar" style="background: linear-gradient(90deg, #f5576c 0%, #f093fb 100%);">
+                            <span>04/04/1931 - 06/01/1932</span>
+                            <span class="duration">0.8 años</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Período de máxima coincidencia -->
+            <div class="max-coincidence">
+                <h2>🏆 Período de Máxima Coincidencia</h2>
+                <p style="font-size: 1.2em; margin-bottom: 20px;">
+                    <strong>Abril 1931 - Enero 1932</strong> es el único período donde los 8 periódicos estuvieron activos simultáneamente.
+                </p>
+                <div class="highlight-stat">
+                    <div class="stat-card">
+                        <span class="stat-label">Fecha inicio</span>
+                        <span class="stat-value">04/04/1931</span>
+                        <span class="stat-label">Crisol comienza publicación</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Fecha fin</span>
+                        <span class="stat-value">06/01/1932</span>
+                        <span class="stat-label">Crisol cesa publicación</span>
+                    </div>
+                </div>
+                <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 1.4em;">Periódicos activos (8 totales):</h3>
+                <div class="periodico-list">
+                    <div class="periodico-active"><span class="check-icon">✓</span> Crisol</div>
+                    <div class="periodico-active"><span class="check-icon">✓</span> El Heraldo de Madrid</div>
+                    <div class="periodico-active"><span class="check-icon">✓</span> El Imparcial</div>
+                    <div class="periodico-active"><span class="check-icon">✓</span> El Liberal</div>
+                    <div class="periodico-active"><span class="check-icon">✓</span> El Sol</div>
+                    <div class="periodico-active"><span class="check-icon">✓</span> La Libertad (1919)</div>
+                    <div class="periodico-active"><span class="check-icon">✓</span> La Nación</div>
+                    <div class="periodico-active"><span class="check-icon">✓</span> La Época</div>
+                </div>
+            </div>
+
+            <!-- Análisis de coincidencias parciales -->
+            <div class="coincidence-section">
+                <h2>📊 Análisis de Coincidencias Temporales</h2>
+
+                <div class="coincidence-level">
+                    <h3>🔴 8 periódicos simultáneos (máxima coincidencia)</h3>
+                    <div class="period-range">1931 (1 año)</div>
+                </div>
+
+                <div class="coincidence-level">
+                    <h3>🟠 7 periódicos simultáneos</h3>
+                    <div class="period-range">1926-1930 (5 años)</div>
+                    <div class="period-range">1932 (1 año)</div>
+                </div>
+
+                <div class="coincidence-level">
+                    <h3>🟡 6 periódicos simultáneos</h3>
+                    <div class="period-range">1920-1925 (6 años)</div>
+                    <div class="period-range">1933-1935 (3 años)</div>
+                </div>
+
+                <div class="coincidence-level">
+                    <h3>🟢 5 periódicos simultáneos</h3>
+                    <div class="period-range">1918-1919 (2 años)</div>
+                </div>
+
+                <div class="coincidence-level">
+                    <h3>🔵 4 periódicos simultáneos</h3>
+                    <div class="period-range">1891-1917 (27 años) - Período más largo</div>
+                    <div class="period-range">1936-1938 (3 años)</div>
+                </div>
+
+                <div class="coincidence-level">
+                    <h3>🟣 3 periódicos simultáneos</h3>
+                    <div class="period-range">1880-1890 (11 años)</div>
+                </div>
+
+                <div class="coincidence-level">
+                    <h3>⚫ 2 periódicos simultáneos</h3>
+                    <div class="period-range">1867-1879 (13 años)</div>
+                </div>
+
+                <div class="coincidence-level">
+                    <h3>⚪ 1 periódico activo</h3>
+                    <div class="period-range">1849-1866 (18 años) - Solo La Época</div>
+                </div>
+            </div>
+
+            <!-- Contexto histórico -->
+            <div class="legend">
+                <h3>📖 Contexto Histórico</h3>
+                <p><strong>1931</strong> marca el año de proclamación de la Segunda República Española (14 de abril de 1931), lo que explica el auge de nuevas publicaciones y la máxima actividad periodística en Madrid.</p>
+                <p style="margin-top: 15px;"><strong>Crisol</strong> (04/04/1931 - 06/01/1932) fue un periódico republicano de corta vida que define exactamente el período de máxima coincidencia, siendo el último en comenzar y el primero en cerrar.</p>
+                <p style="margin-top: 15px;"><strong>1936-1939</strong> ve el cierre masivo de periódicos debido a la Guerra Civil Española, con casi todos cesando publicación en marzo de 1939.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Proyecto LexiMus | Universidad de Salamanca</p>
+            <p>Análisis generado: 10 de octubre de 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        // Añadir interactividad básica
+        document.querySelectorAll('.timeline-bar').forEach(bar => {
+            bar.addEventListener('click', function() {
+                const name = this.parentElement.querySelector('.periodico-name').textContent;
+                const dates = this.textContent.trim().split(' | ')[0];
+                alert(`${name}\n${dates}`);
+            });
+        });
+    </script>
+</body>
+</html>
