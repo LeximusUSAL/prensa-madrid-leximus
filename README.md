@@ -195,7 +195,7 @@ La **Guerra Civil Española (1936-1939)** marcó el cierre masivo de periódicos
 **Universidad de Salamanca - Departamento de Musicología**
 - Equipo LexiMus USAL
 
-**Contacto**: [Insertar email de contacto del proyecto]
+**Contacto**: mpalacios@usal.es
 
 ## 📄 Licencia
 
