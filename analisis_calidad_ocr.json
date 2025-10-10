@@ -1,0 +1,1675 @@
+{
+  "estadisticas_globales": {
+    "total_archivos_analizados": 80,
+    "total_lineas_analizadas": 32820,
+    "total_palabras_analizadas": 3206961
+  },
+  "tasa_error_global": 30.24,
+  "calidad_global": "Mala",
+  "periodicos": {
+    "Crisol": {
+      "periodo": "1931-1932",
+      "muestras_analizadas": 10,
+      "tasa_error_promedio": 24.98,
+      "calidad_promedio": "Regular",
+      "errores_promedio": {
+        "caracteres_raros": 3392.0,
+        "numeros_en_palabras": 2287.9,
+        "mayusculas_aleatorias": 612.8,
+        "espacios_ausentes": 4.0,
+        "puntuacion_erronea": 713.6,
+        "letras_confundidas": 2409.0,
+        "lineas_fragmentadas": 177.5,
+        "texto_ilegible": 4395.3
+      },
+      "detalle_muestras": [
+        {
+          "archivo": "19310404_00000.txt",
+          "lineas": 242,
+          "palabras": 30194,
+          "caracteres": 151262,
+          "errores": {
+            "caracteres_raros": 853,
+            "numeros_en_palabras": 421,
+            "mayusculas_aleatorias": 126,
+            "espacios_ausentes": 12,
+            "puntuacion_erronea": 158,
+            "letras_confundidas": 1484,
+            "lineas_fragmentadas": 44,
+            "texto_ilegible": 786
+          },
+          "total_errores": 3884,
+          "tasa_error_porcentaje": 12.86,
+          "calidad_estimada": "Buena"
+        },
+        {
+          "archivo": "19310514_00000.txt",
+          "lineas": 205,
+          "palabras": 39066,
+          "caracteres": 204618,
+          "errores": {
+            "caracteres_raros": 2024,
+            "numeros_en_palabras": 466,
+            "mayusculas_aleatorias": 363,
+            "espacios_ausentes": 5,
+            "puntuacion_erronea": 299,
+            "letras_confundidas": 1955,
+            "lineas_fragmentadas": 45,
+            "texto_ilegible": 1582
+          },
+          "total_errores": 6739,
+          "tasa_error_porcentaje": 17.25,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19310714_00000.txt",
+          "lineas": 437,
+          "palabras": 43443,
+          "caracteres": 231491,
+          "errores": {
+            "caracteres_raros": 2840,
+            "numeros_en_palabras": 2231,
+            "mayusculas_aleatorias": 785,
+            "espacios_ausentes": 3,
+            "puntuacion_erronea": 446,
+            "letras_confundidas": 2466,
+            "lineas_fragmentadas": 127,
+            "texto_ilegible": 3106
+          },
+          "total_errores": 12004,
+          "tasa_error_porcentaje": 27.63,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19310721_00000.txt",
+          "lineas": 682,
+          "palabras": 60309,
+          "caracteres": 251141,
+          "errores": {
+            "caracteres_raros": 3060,
+            "numeros_en_palabras": 3935,
+            "mayusculas_aleatorias": 622,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 693,
+            "letras_confundidas": 2249,
+            "lineas_fragmentadas": 253,
+            "texto_ilegible": 4683
+          },
+          "total_errores": 15495,
+          "tasa_error_porcentaje": 25.69,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19310824_00000.txt",
+          "lineas": 514,
+          "palabras": 66656,
+          "caracteres": 296397,
+          "errores": {
+            "caracteres_raros": 4452,
+            "numeros_en_palabras": 2775,
+            "mayusculas_aleatorias": 745,
+            "espacios_ausentes": 5,
+            "puntuacion_erronea": 1038,
+            "letras_confundidas": 2797,
+            "lineas_fragmentadas": 178,
+            "texto_ilegible": 6589
+          },
+          "total_errores": 18579,
+          "tasa_error_porcentaje": 27.87,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19310911_00000.txt",
+          "lineas": 588,
+          "palabras": 66699,
+          "caracteres": 309185,
+          "errores": {
+            "caracteres_raros": 4602,
+            "numeros_en_palabras": 3918,
+            "mayusculas_aleatorias": 766,
+            "espacios_ausentes": 2,
+            "puntuacion_erronea": 1044,
+            "letras_confundidas": 2965,
+            "lineas_fragmentadas": 177,
+            "texto_ilegible": 7083
+          },
+          "total_errores": 20557,
+          "tasa_error_porcentaje": 30.82,
+          "calidad_estimada": "Mala"
+        },
+        {
+          "archivo": "19311109_00000.txt",
+          "lineas": 629,
+          "palabras": 63620,
+          "caracteres": 272363,
+          "errores": {
+            "caracteres_raros": 4779,
+            "numeros_en_palabras": 2829,
+            "mayusculas_aleatorias": 545,
+            "espacios_ausentes": 6,
+            "puntuacion_erronea": 1166,
+            "letras_confundidas": 2298,
+            "lineas_fragmentadas": 233,
+            "texto_ilegible": 6880
+          },
+          "total_errores": 18736,
+          "tasa_error_porcentaje": 29.45,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19311119_00000.txt",
+          "lineas": 715,
+          "palabras": 62388,
+          "caracteres": 294853,
+          "errores": {
+            "caracteres_raros": 3393,
+            "numeros_en_palabras": 2513,
+            "mayusculas_aleatorias": 627,
+            "espacios_ausentes": 2,
+            "puntuacion_erronea": 600,
+            "letras_confundidas": 2991,
+            "lineas_fragmentadas": 244,
+            "texto_ilegible": 4265
+          },
+          "total_errores": 14635,
+          "tasa_error_porcentaje": 23.46,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19320101_00000.txt",
+          "lineas": 778,
+          "palabras": 53177,
+          "caracteres": 236954,
+          "errores": {
+            "caracteres_raros": 4072,
+            "numeros_en_palabras": 1809,
+            "mayusculas_aleatorias": 551,
+            "espacios_ausentes": 5,
+            "puntuacion_erronea": 1158,
+            "letras_confundidas": 2350,
+            "lineas_fragmentadas": 283,
+            "texto_ilegible": 5423
+          },
+          "total_errores": 15651,
+          "tasa_error_porcentaje": 29.43,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19320106_00000.txt",
+          "lineas": 608,
+          "palabras": 53857,
+          "caracteres": 270201,
+          "errores": {
+            "caracteres_raros": 3845,
+            "numeros_en_palabras": 1982,
+            "mayusculas_aleatorias": 998,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 534,
+            "letras_confundidas": 2535,
+            "lineas_fragmentadas": 191,
+            "texto_ilegible": 3556
+          },
+          "total_errores": 13641,
+          "tasa_error_porcentaje": 25.33,
+          "calidad_estimada": "Regular"
+        }
+      ]
+    },
+    "El Heraldo de Madrid": {
+      "periodo": "1890-1939",
+      "muestras_analizadas": 10,
+      "tasa_error_promedio": 51.62,
+      "calidad_promedio": "Muy mala",
+      "errores_promedio": {
+        "caracteres_raros": 1763.0,
+        "numeros_en_palabras": 1238.7,
+        "mayusculas_aleatorias": 290.0,
+        "espacios_ausentes": 16.6,
+        "puntuacion_erronea": 318.7,
+        "letras_confundidas": 1129.5,
+        "lineas_fragmentadas": 228.3,
+        "texto_ilegible": 2346.4
+      },
+      "detalle_muestras": [
+        {
+          "archivo": "18901029_00000.txt",
+          "lineas": 193,
+          "palabras": 14734,
+          "caracteres": 86505,
+          "errores": {
+            "caracteres_raros": 993,
+            "numeros_en_palabras": 540,
+            "mayusculas_aleatorias": 197,
+            "espacios_ausentes": 1,
+            "puntuacion_erronea": 190,
+            "letras_confundidas": 894,
+            "lineas_fragmentadas": 38,
+            "texto_ilegible": 755
+          },
+          "total_errores": 3608,
+          "tasa_error_porcentaje": 24.49,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "18960816_00000.txt",
+          "lineas": 1,
+          "palabras": 1,
+          "caracteres": 4,
+          "errores": {
+            "caracteres_raros": 1,
+            "numeros_en_palabras": 0,
+            "mayusculas_aleatorias": 0,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 0,
+            "letras_confundidas": 0,
+            "lineas_fragmentadas": 1,
+            "texto_ilegible": 1
+          },
+          "total_errores": 3,
+          "tasa_error_porcentaje": 300.0,
+          "calidad_estimada": "Muy mala"
+        },
+        {
+          "archivo": "19010719_00000.txt",
+          "lineas": 258,
+          "palabras": 32514,
+          "caracteres": 153550,
+          "errores": {
+            "caracteres_raros": 1635,
+            "numeros_en_palabras": 1157,
+            "mayusculas_aleatorias": 404,
+            "espacios_ausentes": 2,
+            "puntuacion_erronea": 239,
+            "letras_confundidas": 1381,
+            "lineas_fragmentadas": 69,
+            "texto_ilegible": 1560
+          },
+          "total_errores": 6447,
+          "tasa_error_porcentaje": 19.83,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19050419_00000.txt",
+          "lineas": 297,
+          "palabras": 45929,
+          "caracteres": 150175,
+          "errores": {
+            "caracteres_raros": 1678,
+            "numeros_en_palabras": 2611,
+            "mayusculas_aleatorias": 216,
+            "espacios_ausentes": 3,
+            "puntuacion_erronea": 354,
+            "letras_confundidas": 903,
+            "lineas_fragmentadas": 61,
+            "texto_ilegible": 3087
+          },
+          "total_errores": 8913,
+          "tasa_error_porcentaje": 19.41,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19120714_00000.txt",
+          "lineas": 346,
+          "palabras": 54419,
+          "caracteres": 198904,
+          "errores": {
+            "caracteres_raros": 2356,
+            "numeros_en_palabras": 1075,
+            "mayusculas_aleatorias": 364,
+            "espacios_ausentes": 4,
+            "puntuacion_erronea": 516,
+            "letras_confundidas": 1140,
+            "lineas_fragmentadas": 105,
+            "texto_ilegible": 3672
+          },
+          "total_errores": 9232,
+          "tasa_error_porcentaje": 16.96,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19171022_00000.txt",
+          "lineas": 323,
+          "palabras": 37498,
+          "caracteres": 130127,
+          "errores": {
+            "caracteres_raros": 3083,
+            "numeros_en_palabras": 2364,
+            "mayusculas_aleatorias": 354,
+            "espacios_ausentes": 8,
+            "puntuacion_erronea": 564,
+            "letras_confundidas": 649,
+            "lineas_fragmentadas": 66,
+            "texto_ilegible": 3663
+          },
+          "total_errores": 10751,
+          "tasa_error_porcentaje": 28.67,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19231025_00000.txt",
+          "lineas": 653,
+          "palabras": 57757,
+          "caracteres": 178682,
+          "errores": {
+            "caracteres_raros": 4032,
+            "numeros_en_palabras": 2690,
+            "mayusculas_aleatorias": 471,
+            "espacios_ausentes": 5,
+            "puntuacion_erronea": 566,
+            "letras_confundidas": 1295,
+            "lineas_fragmentadas": 308,
+            "texto_ilegible": 7380
+          },
+          "total_errores": 16747,
+          "tasa_error_porcentaje": 29.0,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19300809_00000.txt",
+          "lineas": 455,
+          "palabras": 32913,
+          "caracteres": 192071,
+          "errores": {
+            "caracteres_raros": 1941,
+            "numeros_en_palabras": 814,
+            "mayusculas_aleatorias": 367,
+            "espacios_ausentes": 61,
+            "puntuacion_erronea": 365,
+            "letras_confundidas": 1802,
+            "lineas_fragmentadas": 93,
+            "texto_ilegible": 1521
+          },
+          "total_errores": 6964,
+          "tasa_error_porcentaje": 21.16,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19330615_00000.txt",
+          "lineas": 595,
+          "palabras": 48170,
+          "caracteres": 277090,
+          "errores": {
+            "caracteres_raros": 1756,
+            "numeros_en_palabras": 1041,
+            "mayusculas_aleatorias": 433,
+            "espacios_ausentes": 74,
+            "puntuacion_erronea": 362,
+            "letras_confundidas": 2943,
+            "lineas_fragmentadas": 165,
+            "texto_ilegible": 1613
+          },
+          "total_errores": 8387,
+          "tasa_error_porcentaje": 17.41,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19390326_00000.txt",
+          "lineas": 1967,
+          "palabras": 5756,
+          "caracteres": 34786,
+          "errores": {
+            "caracteres_raros": 155,
+            "numeros_en_palabras": 95,
+            "mayusculas_aleatorias": 94,
+            "espacios_ausentes": 8,
+            "puntuacion_erronea": 31,
+            "letras_confundidas": 288,
+            "lineas_fragmentadas": 1377,
+            "texto_ilegible": 212
+          },
+          "total_errores": 2260,
+          "tasa_error_porcentaje": 39.26,
+          "calidad_estimada": "Mala"
+        }
+      ]
+    },
+    "El Imparcial": {
+      "periodo": "1867-1933",
+      "muestras_analizadas": 10,
+      "tasa_error_promedio": 20.0,
+      "calidad_promedio": "Regular",
+      "errores_promedio": {
+        "caracteres_raros": 1521.4,
+        "numeros_en_palabras": 861.5,
+        "mayusculas_aleatorias": 317.1,
+        "espacios_ausentes": 1.1,
+        "puntuacion_erronea": 268.5,
+        "letras_confundidas": 1057.2,
+        "lineas_fragmentadas": 56.1,
+        "texto_ilegible": 1735.2
+      },
+      "detalle_muestras": [
+        {
+          "archivo": "18670101-18671231_00000.txt",
+          "lineas": 43,
+          "palabras": 571,
+          "caracteres": 3148,
+          "errores": {
+            "caracteres_raros": 48,
+            "numeros_en_palabras": 21,
+            "mayusculas_aleatorias": 2,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 6,
+            "letras_confundidas": 14,
+            "lineas_fragmentadas": 3,
+            "texto_ilegible": 33
+          },
+          "total_errores": 127,
+          "tasa_error_porcentaje": 22.24,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "18690622_00000.txt",
+          "lineas": 67,
+          "palabras": 25495,
+          "caracteres": 116223,
+          "errores": {
+            "caracteres_raros": 1174,
+            "numeros_en_palabras": 566,
+            "mayusculas_aleatorias": 110,
+            "espacios_ausentes": 1,
+            "puntuacion_erronea": 225,
+            "letras_confundidas": 1247,
+            "lineas_fragmentadas": 20,
+            "texto_ilegible": 1404
+          },
+          "total_errores": 4747,
+          "tasa_error_porcentaje": 18.62,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "18830605_00000.txt",
+          "lineas": 192,
+          "palabras": 20374,
+          "caracteres": 98165,
+          "errores": {
+            "caracteres_raros": 918,
+            "numeros_en_palabras": 739,
+            "mayusculas_aleatorias": 210,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 136,
+            "letras_confundidas": 1007,
+            "lineas_fragmentadas": 62,
+            "texto_ilegible": 1078
+          },
+          "total_errores": 4150,
+          "tasa_error_porcentaje": 20.37,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "18850922_00000.txt",
+          "lineas": 108,
+          "palabras": 23276,
+          "caracteres": 102490,
+          "errores": {
+            "caracteres_raros": 907,
+            "numeros_en_palabras": 632,
+            "mayusculas_aleatorias": 198,
+            "espacios_ausentes": 2,
+            "puntuacion_erronea": 170,
+            "letras_confundidas": 928,
+            "lineas_fragmentadas": 36,
+            "texto_ilegible": 1344
+          },
+          "total_errores": 4217,
+          "tasa_error_porcentaje": 18.12,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "18860308_00000.txt",
+          "lineas": 184,
+          "palabras": 34781,
+          "caracteres": 115416,
+          "errores": {
+            "caracteres_raros": 920,
+            "numeros_en_palabras": 552,
+            "mayusculas_aleatorias": 166,
+            "espacios_ausentes": 1,
+            "puntuacion_erronea": 176,
+            "letras_confundidas": 867,
+            "lineas_fragmentadas": 44,
+            "texto_ilegible": 1615
+          },
+          "total_errores": 4341,
+          "tasa_error_porcentaje": 12.48,
+          "calidad_estimada": "Buena"
+        },
+        {
+          "archivo": "18981023_00000.txt",
+          "lineas": 356,
+          "palabras": 32125,
+          "caracteres": 132002,
+          "errores": {
+            "caracteres_raros": 1802,
+            "numeros_en_palabras": 1289,
+            "mayusculas_aleatorias": 289,
+            "espacios_ausentes": 2,
+            "puntuacion_erronea": 358,
+            "letras_confundidas": 982,
+            "lineas_fragmentadas": 88,
+            "texto_ilegible": 2415
+          },
+          "total_errores": 7225,
+          "tasa_error_porcentaje": 22.49,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "18990330_00000.txt",
+          "lineas": 306,
+          "palabras": 37590,
+          "caracteres": 138328,
+          "errores": {
+            "caracteres_raros": 1163,
+            "numeros_en_palabras": 930,
+            "mayusculas_aleatorias": 201,
+            "espacios_ausentes": 2,
+            "puntuacion_erronea": 212,
+            "letras_confundidas": 1162,
+            "lineas_fragmentadas": 65,
+            "texto_ilegible": 1860
+          },
+          "total_errores": 5595,
+          "tasa_error_porcentaje": 14.88,
+          "calidad_estimada": "Buena"
+        },
+        {
+          "archivo": "19130109_00000.txt",
+          "lineas": 383,
+          "palabras": 34317,
+          "caracteres": 176630,
+          "errores": {
+            "caracteres_raros": 3835,
+            "numeros_en_palabras": 1194,
+            "mayusculas_aleatorias": 830,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 669,
+            "letras_confundidas": 1201,
+            "lineas_fragmentadas": 93,
+            "texto_ilegible": 3241
+          },
+          "total_errores": 11063,
+          "tasa_error_porcentaje": 32.24,
+          "calidad_estimada": "Mala"
+        },
+        {
+          "archivo": "19150517_00000.txt",
+          "lineas": 382,
+          "palabras": 35318,
+          "caracteres": 172096,
+          "errores": {
+            "caracteres_raros": 2617,
+            "numeros_en_palabras": 869,
+            "mayusculas_aleatorias": 622,
+            "espacios_ausentes": 1,
+            "puntuacion_erronea": 376,
+            "letras_confundidas": 1363,
+            "lineas_fragmentadas": 81,
+            "texto_ilegible": 2441
+          },
+          "total_errores": 8370,
+          "tasa_error_porcentaje": 23.7,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19330530_00000.txt",
+          "lineas": 344,
+          "palabras": 56123,
+          "caracteres": 249349,
+          "errores": {
+            "caracteres_raros": 1830,
+            "numeros_en_palabras": 1823,
+            "mayusculas_aleatorias": 543,
+            "espacios_ausentes": 2,
+            "puntuacion_erronea": 357,
+            "letras_confundidas": 1801,
+            "lineas_fragmentadas": 69,
+            "texto_ilegible": 1921
+          },
+          "total_errores": 8346,
+          "tasa_error_porcentaje": 14.87,
+          "calidad_estimada": "Buena"
+        }
+      ]
+    },
+    "El Liberal": {
+      "periodo": "1879-1939",
+      "muestras_analizadas": 10,
+      "tasa_error_promedio": 57.16,
+      "calidad_promedio": "Muy mala",
+      "errores_promedio": {
+        "caracteres_raros": 2228.6,
+        "numeros_en_palabras": 990.9,
+        "mayusculas_aleatorias": 387.1,
+        "espacios_ausentes": 1.9,
+        "puntuacion_erronea": 449.7,
+        "letras_confundidas": 959.9,
+        "lineas_fragmentadas": 115.7,
+        "texto_ilegible": 2473.7
+      },
+      "detalle_muestras": [
+        {
+          "archivo": "18790715_00000.txt",
+          "lineas": 212,
+          "palabras": 26357,
+          "caracteres": 138523,
+          "errores": {
+            "caracteres_raros": 1470,
+            "numeros_en_palabras": 585,
+            "mayusculas_aleatorias": 229,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 290,
+            "letras_confundidas": 1444,
+            "lineas_fragmentadas": 78,
+            "texto_ilegible": 1498
+          },
+          "total_errores": 5594,
+          "tasa_error_porcentaje": 21.22,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "18800406_00000.txt",
+          "lineas": 174,
+          "palabras": 20940,
+          "caracteres": 98507,
+          "errores": {
+            "caracteres_raros": 1074,
+            "numeros_en_palabras": 960,
+            "mayusculas_aleatorias": 204,
+            "espacios_ausentes": 1,
+            "puntuacion_erronea": 236,
+            "letras_confundidas": 902,
+            "lineas_fragmentadas": 37,
+            "texto_ilegible": 1251
+          },
+          "total_errores": 4665,
+          "tasa_error_porcentaje": 22.28,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "18800409_00000.txt",
+          "lineas": 159,
+          "palabras": 16802,
+          "caracteres": 94841,
+          "errores": {
+            "caracteres_raros": 2069,
+            "numeros_en_palabras": 730,
+            "mayusculas_aleatorias": 332,
+            "espacios_ausentes": 2,
+            "puntuacion_erronea": 330,
+            "letras_confundidas": 909,
+            "lineas_fragmentadas": 73,
+            "texto_ilegible": 1542
+          },
+          "total_errores": 5987,
+          "tasa_error_porcentaje": 35.63,
+          "calidad_estimada": "Mala"
+        },
+        {
+          "archivo": "18930801_00000.txt",
+          "lineas": 235,
+          "palabras": 32682,
+          "caracteres": 129926,
+          "errores": {
+            "caracteres_raros": 1094,
+            "numeros_en_palabras": 2538,
+            "mayusculas_aleatorias": 173,
+            "espacios_ausentes": 1,
+            "puntuacion_erronea": 220,
+            "letras_confundidas": 893,
+            "lineas_fragmentadas": 64,
+            "texto_ilegible": 1258
+          },
+          "total_errores": 6241,
+          "tasa_error_porcentaje": 19.1,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "18931024_00000.txt",
+          "lineas": 273,
+          "palabras": 34004,
+          "caracteres": 139109,
+          "errores": {
+            "caracteres_raros": 2688,
+            "numeros_en_palabras": 800,
+            "mayusculas_aleatorias": 434,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 487,
+            "letras_confundidas": 1036,
+            "lineas_fragmentadas": 79,
+            "texto_ilegible": 2804
+          },
+          "total_errores": 8328,
+          "tasa_error_porcentaje": 24.49,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19070614_00000.txt",
+          "lineas": 436,
+          "palabras": 22340,
+          "caracteres": 127647,
+          "errores": {
+            "caracteres_raros": 2072,
+            "numeros_en_palabras": 941,
+            "mayusculas_aleatorias": 681,
+            "espacios_ausentes": 5,
+            "puntuacion_erronea": 383,
+            "letras_confundidas": 1254,
+            "lineas_fragmentadas": 126,
+            "texto_ilegible": 1908
+          },
+          "total_errores": 7370,
+          "tasa_error_porcentaje": 32.99,
+          "calidad_estimada": "Mala"
+        },
+        {
+          "archivo": "19180709_00000.txt",
+          "lineas": 664,
+          "palabras": 49659,
+          "caracteres": 213544,
+          "errores": {
+            "caracteres_raros": 6983,
+            "numeros_en_palabras": 1601,
+            "mayusculas_aleatorias": 1039,
+            "espacios_ausentes": 1,
+            "puntuacion_erronea": 1404,
+            "letras_confundidas": 1229,
+            "lineas_fragmentadas": 293,
+            "texto_ilegible": 8149
+          },
+          "total_errores": 20699,
+          "tasa_error_porcentaje": 41.68,
+          "calidad_estimada": "Mala"
+        },
+        {
+          "archivo": "19210811_00000.txt",
+          "lineas": 867,
+          "palabras": 41026,
+          "caracteres": 193244,
+          "errores": {
+            "caracteres_raros": 3951,
+            "numeros_en_palabras": 1275,
+            "mayusculas_aleatorias": 558,
+            "espacios_ausentes": 2,
+            "puntuacion_erronea": 1010,
+            "letras_confundidas": 1679,
+            "lineas_fragmentadas": 294,
+            "texto_ilegible": 5549
+          },
+          "total_errores": 14318,
+          "tasa_error_porcentaje": 34.9,
+          "calidad_estimada": "Mala"
+        },
+        {
+          "archivo": "19330520_00000.txt",
+          "lineas": 1,
+          "palabras": 1,
+          "caracteres": 16,
+          "errores": {
+            "caracteres_raros": 1,
+            "numeros_en_palabras": 0,
+            "mayusculas_aleatorias": 0,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 0,
+            "letras_confundidas": 0,
+            "lineas_fragmentadas": 1,
+            "texto_ilegible": 1
+          },
+          "total_errores": 3,
+          "tasa_error_porcentaje": 300.0,
+          "calidad_estimada": "Muy mala"
+        },
+        {
+          "archivo": "19390326_00000.txt",
+          "lineas": 220,
+          "palabras": 7299,
+          "caracteres": 42342,
+          "errores": {
+            "caracteres_raros": 884,
+            "numeros_en_palabras": 479,
+            "mayusculas_aleatorias": 221,
+            "espacios_ausentes": 7,
+            "puntuacion_erronea": 137,
+            "letras_confundidas": 253,
+            "lineas_fragmentadas": 112,
+            "texto_ilegible": 777
+          },
+          "total_errores": 2870,
+          "tasa_error_porcentaje": 39.32,
+          "calidad_estimada": "Mala"
+        }
+      ]
+    },
+    "El Sol": {
+      "periodo": "1917-1939",
+      "muestras_analizadas": 10,
+      "tasa_error_promedio": 25.55,
+      "calidad_promedio": "Regular",
+      "errores_promedio": {
+        "caracteres_raros": 3611.4,
+        "numeros_en_palabras": 3010.8,
+        "mayusculas_aleatorias": 439.5,
+        "espacios_ausentes": 3.9,
+        "puntuacion_erronea": 813.4,
+        "letras_confundidas": 2340.5,
+        "lineas_fragmentadas": 135.5,
+        "texto_ilegible": 5315.9
+      },
+      "detalle_muestras": [
+        {
+          "archivo": "19171203_00000.txt",
+          "lineas": 318,
+          "palabras": 55820,
+          "caracteres": 261123,
+          "errores": {
+            "caracteres_raros": 6662,
+            "numeros_en_palabras": 2035,
+            "mayusculas_aleatorias": 985,
+            "espacios_ausentes": 2,
+            "puntuacion_erronea": 1877,
+            "letras_confundidas": 2046,
+            "lineas_fragmentadas": 97,
+            "texto_ilegible": 8164
+          },
+          "total_errores": 21868,
+          "tasa_error_porcentaje": 39.18,
+          "calidad_estimada": "Mala"
+        },
+        {
+          "archivo": "19180904_00000.txt",
+          "lineas": 497,
+          "palabras": 40343,
+          "caracteres": 212023,
+          "errores": {
+            "caracteres_raros": 3487,
+            "numeros_en_palabras": 1999,
+            "mayusculas_aleatorias": 484,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 1096,
+            "letras_confundidas": 2004,
+            "lineas_fragmentadas": 169,
+            "texto_ilegible": 4645
+          },
+          "total_errores": 13884,
+          "tasa_error_porcentaje": 34.41,
+          "calidad_estimada": "Mala"
+        },
+        {
+          "archivo": "19230313_00000.txt",
+          "lineas": 428,
+          "palabras": 56469,
+          "caracteres": 249566,
+          "errores": {
+            "caracteres_raros": 1916,
+            "numeros_en_palabras": 3537,
+            "mayusculas_aleatorias": 327,
+            "espacios_ausentes": 6,
+            "puntuacion_erronea": 345,
+            "letras_confundidas": 2074,
+            "lineas_fragmentadas": 122,
+            "texto_ilegible": 3345
+          },
+          "total_errores": 11672,
+          "tasa_error_porcentaje": 20.67,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19230718_00000.txt",
+          "lineas": 495,
+          "palabras": 62196,
+          "caracteres": 266879,
+          "errores": {
+            "caracteres_raros": 1591,
+            "numeros_en_palabras": 1653,
+            "mayusculas_aleatorias": 371,
+            "espacios_ausentes": 10,
+            "puntuacion_erronea": 298,
+            "letras_confundidas": 2396,
+            "lineas_fragmentadas": 137,
+            "texto_ilegible": 3001
+          },
+          "total_errores": 9457,
+          "tasa_error_porcentaje": 15.21,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19280219_00000.txt",
+          "lineas": 740,
+          "palabras": 89907,
+          "caracteres": 394426,
+          "errores": {
+            "caracteres_raros": 5255,
+            "numeros_en_palabras": 3898,
+            "mayusculas_aleatorias": 547,
+            "espacios_ausentes": 10,
+            "puntuacion_erronea": 932,
+            "letras_confundidas": 3266,
+            "lineas_fragmentadas": 170,
+            "texto_ilegible": 7043
+          },
+          "total_errores": 21121,
+          "tasa_error_porcentaje": 23.49,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19280501_00000.txt",
+          "lineas": 624,
+          "palabras": 102710,
+          "caracteres": 363676,
+          "errores": {
+            "caracteres_raros": 4057,
+            "numeros_en_palabras": 3976,
+            "mayusculas_aleatorias": 465,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 790,
+            "letras_confundidas": 2420,
+            "lineas_fragmentadas": 176,
+            "texto_ilegible": 8055
+          },
+          "total_errores": 19939,
+          "tasa_error_porcentaje": 19.41,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19290522_00000.txt",
+          "lineas": 491,
+          "palabras": 54669,
+          "caracteres": 294291,
+          "errores": {
+            "caracteres_raros": 2120,
+            "numeros_en_palabras": 6346,
+            "mayusculas_aleatorias": 345,
+            "espacios_ausentes": 3,
+            "puntuacion_erronea": 585,
+            "letras_confundidas": 2916,
+            "lineas_fragmentadas": 120,
+            "texto_ilegible": 3216
+          },
+          "total_errores": 15651,
+          "tasa_error_porcentaje": 28.63,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19330208_00000.txt",
+          "lineas": 648,
+          "palabras": 93984,
+          "caracteres": 338323,
+          "errores": {
+            "caracteres_raros": 4486,
+            "numeros_en_palabras": 3289,
+            "mayusculas_aleatorias": 327,
+            "espacios_ausentes": 1,
+            "puntuacion_erronea": 950,
+            "letras_confundidas": 2559,
+            "lineas_fragmentadas": 216,
+            "texto_ilegible": 7203
+          },
+          "total_errores": 19031,
+          "tasa_error_porcentaje": 20.25,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19330517_00000.txt",
+          "lineas": 441,
+          "palabras": 117583,
+          "caracteres": 431019,
+          "errores": {
+            "caracteres_raros": 5874,
+            "numeros_en_palabras": 3233,
+            "mayusculas_aleatorias": 384,
+            "espacios_ausentes": 3,
+            "puntuacion_erronea": 1149,
+            "letras_confundidas": 3506,
+            "lineas_fragmentadas": 112,
+            "texto_ilegible": 7818
+          },
+          "total_errores": 22079,
+          "tasa_error_porcentaje": 18.78,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19390327_00000.txt",
+          "lineas": 134,
+          "palabras": 5656,
+          "caracteres": 26874,
+          "errores": {
+            "caracteres_raros": 666,
+            "numeros_en_palabras": 142,
+            "mayusculas_aleatorias": 160,
+            "espacios_ausentes": 4,
+            "puntuacion_erronea": 112,
+            "letras_confundidas": 218,
+            "lineas_fragmentadas": 36,
+            "texto_ilegible": 669
+          },
+          "total_errores": 2007,
+          "tasa_error_porcentaje": 35.48,
+          "calidad_estimada": "Mala"
+        }
+      ]
+    },
+    "La Epoca": {
+      "periodo": "1849-1936",
+      "muestras_analizadas": 10,
+      "tasa_error_promedio": 23.01,
+      "calidad_promedio": "Regular",
+      "errores_promedio": {
+        "caracteres_raros": 1651.7,
+        "numeros_en_palabras": 840.7,
+        "mayusculas_aleatorias": 277.4,
+        "espacios_ausentes": 1.4,
+        "puntuacion_erronea": 335.2,
+        "letras_confundidas": 1559.2,
+        "lineas_fragmentadas": 58.9,
+        "texto_ilegible": 1434.7
+      },
+      "detalle_muestras": [
+        {
+          "archivo": "18490401_00001.txt",
+          "lineas": 56,
+          "palabras": 17170,
+          "caracteres": 89496,
+          "errores": {
+            "caracteres_raros": 336,
+            "numeros_en_palabras": 221,
+            "mayusculas_aleatorias": 48,
+            "espacios_ausentes": 6,
+            "puntuacion_erronea": 48,
+            "letras_confundidas": 1079,
+            "lineas_fragmentadas": 20,
+            "texto_ilegible": 324
+          },
+          "total_errores": 2082,
+          "tasa_error_porcentaje": 12.13,
+          "calidad_estimada": "Buena"
+        },
+        {
+          "archivo": "18660614_05643.txt",
+          "lineas": 268,
+          "palabras": 22012,
+          "caracteres": 144386,
+          "errores": {
+            "caracteres_raros": 5710,
+            "numeros_en_palabras": 1020,
+            "mayusculas_aleatorias": 652,
+            "espacios_ausentes": 3,
+            "puntuacion_erronea": 1088,
+            "letras_confundidas": 1197,
+            "lineas_fragmentadas": 125,
+            "texto_ilegible": 3218
+          },
+          "total_errores": 13013,
+          "tasa_error_porcentaje": 59.12,
+          "calidad_estimada": "Muy mala"
+        },
+        {
+          "archivo": "18680903_06359.txt",
+          "lineas": 110,
+          "palabras": 28353,
+          "caracteres": 162586,
+          "errores": {
+            "caracteres_raros": 1497,
+            "numeros_en_palabras": 697,
+            "mayusculas_aleatorias": 263,
+            "espacios_ausentes": 1,
+            "puntuacion_erronea": 327,
+            "letras_confundidas": 1702,
+            "lineas_fragmentadas": 32,
+            "texto_ilegible": 1339
+          },
+          "total_errores": 5858,
+          "tasa_error_porcentaje": 20.66,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "18720302_07113.txt",
+          "lineas": 137,
+          "palabras": 25901,
+          "caracteres": 150262,
+          "errores": {
+            "caracteres_raros": 1168,
+            "numeros_en_palabras": 721,
+            "mayusculas_aleatorias": 174,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 190,
+            "letras_confundidas": 1768,
+            "lineas_fragmentadas": 23,
+            "texto_ilegible": 1108
+          },
+          "total_errores": 5152,
+          "tasa_error_porcentaje": 19.89,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "18771205_09150.txt",
+          "lineas": 162,
+          "palabras": 24391,
+          "caracteres": 144208,
+          "errores": {
+            "caracteres_raros": 605,
+            "numeros_en_palabras": 688,
+            "mayusculas_aleatorias": 180,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 92,
+            "letras_confundidas": 1744,
+            "lineas_fragmentadas": 34,
+            "texto_ilegible": 749
+          },
+          "total_errores": 4092,
+          "tasa_error_porcentaje": 16.78,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "18891214_13403.txt",
+          "lineas": 265,
+          "palabras": 24186,
+          "caracteres": 137512,
+          "errores": {
+            "caracteres_raros": 1484,
+            "numeros_en_palabras": 1204,
+            "mayusculas_aleatorias": 327,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 187,
+            "letras_confundidas": 1547,
+            "lineas_fragmentadas": 72,
+            "texto_ilegible": 1089
+          },
+          "total_errores": 5910,
+          "tasa_error_porcentaje": 24.44,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "18930619_14641.txt",
+          "lineas": 239,
+          "palabras": 25012,
+          "caracteres": 145860,
+          "errores": {
+            "caracteres_raros": 689,
+            "numeros_en_palabras": 576,
+            "mayusculas_aleatorias": 188,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 118,
+            "letras_confundidas": 1824,
+            "lineas_fragmentadas": 57,
+            "texto_ilegible": 490
+          },
+          "total_errores": 3942,
+          "tasa_error_porcentaje": 15.76,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19091029_21198.txt",
+          "lineas": 333,
+          "palabras": 33720,
+          "caracteres": 128820,
+          "errores": {
+            "caracteres_raros": 1492,
+            "numeros_en_palabras": 974,
+            "mayusculas_aleatorias": 186,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 410,
+            "letras_confundidas": 1018,
+            "lineas_fragmentadas": 48,
+            "texto_ilegible": 2526
+          },
+          "total_errores": 6654,
+          "tasa_error_porcentaje": 19.73,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19140104_22698.txt",
+          "lineas": 490,
+          "palabras": 37402,
+          "caracteres": 201776,
+          "errores": {
+            "caracteres_raros": 2114,
+            "numeros_en_palabras": 1545,
+            "mayusculas_aleatorias": 442,
+            "espacios_ausentes": 4,
+            "puntuacion_erronea": 640,
+            "letras_confundidas": 2046,
+            "lineas_fragmentadas": 107,
+            "texto_ilegible": 2329
+          },
+          "total_errores": 9227,
+          "tasa_error_porcentaje": 24.67,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19360331_30040.txt",
+          "lineas": 347,
+          "palabras": 33401,
+          "caracteres": 168999,
+          "errores": {
+            "caracteres_raros": 1422,
+            "numeros_en_palabras": 761,
+            "mayusculas_aleatorias": 314,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 252,
+            "letras_confundidas": 1667,
+            "lineas_fragmentadas": 71,
+            "texto_ilegible": 1175
+          },
+          "total_errores": 5662,
+          "tasa_error_porcentaje": 16.95,
+          "calidad_estimada": "Regular"
+        }
+      ]
+    },
+    "La Libertad": {
+      "periodo": "1919-1939",
+      "muestras_analizadas": 10,
+      "tasa_error_promedio": 22.71,
+      "calidad_promedio": "Regular",
+      "errores_promedio": {
+        "caracteres_raros": 1958.9,
+        "numeros_en_palabras": 1099.0,
+        "mayusculas_aleatorias": 439.2,
+        "espacios_ausentes": 3.2,
+        "puntuacion_erronea": 384.9,
+        "letras_confundidas": 1897.9,
+        "lineas_fragmentadas": 145.3,
+        "texto_ilegible": 1879.4
+      },
+      "detalle_muestras": [
+        {
+          "archivo": "19191221_00000.txt",
+          "lineas": 334,
+          "palabras": 34426,
+          "caracteres": 149154,
+          "errores": {
+            "caracteres_raros": 2620,
+            "numeros_en_palabras": 695,
+            "mayusculas_aleatorias": 438,
+            "espacios_ausentes": 2,
+            "puntuacion_erronea": 688,
+            "letras_confundidas": 1226,
+            "lineas_fragmentadas": 99,
+            "texto_ilegible": 2792
+          },
+          "total_errores": 8560,
+          "tasa_error_porcentaje": 24.86,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19240904_00000.txt",
+          "lineas": 414,
+          "palabras": 33336,
+          "caracteres": 201819,
+          "errores": {
+            "caracteres_raros": 1976,
+            "numeros_en_palabras": 896,
+            "mayusculas_aleatorias": 720,
+            "espacios_ausentes": 3,
+            "puntuacion_erronea": 275,
+            "letras_confundidas": 1986,
+            "lineas_fragmentadas": 146,
+            "texto_ilegible": 1489
+          },
+          "total_errores": 7491,
+          "tasa_error_porcentaje": 22.47,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19250129_00000.txt",
+          "lineas": 410,
+          "palabras": 33311,
+          "caracteres": 199449,
+          "errores": {
+            "caracteres_raros": 1821,
+            "numeros_en_palabras": 1183,
+            "mayusculas_aleatorias": 586,
+            "espacios_ausentes": 6,
+            "puntuacion_erronea": 286,
+            "letras_confundidas": 2039,
+            "lineas_fragmentadas": 174,
+            "texto_ilegible": 1613
+          },
+          "total_errores": 7708,
+          "tasa_error_porcentaje": 23.14,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19270927_00000.txt",
+          "lineas": 408,
+          "palabras": 37269,
+          "caracteres": 213780,
+          "errores": {
+            "caracteres_raros": 2780,
+            "numeros_en_palabras": 1416,
+            "mayusculas_aleatorias": 530,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 802,
+            "letras_confundidas": 1978,
+            "lineas_fragmentadas": 149,
+            "texto_ilegible": 2809
+          },
+          "total_errores": 10464,
+          "tasa_error_porcentaje": 28.08,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19290526_00000.txt",
+          "lineas": 662,
+          "palabras": 71094,
+          "caracteres": 326578,
+          "errores": {
+            "caracteres_raros": 3938,
+            "numeros_en_palabras": 1746,
+            "mayusculas_aleatorias": 614,
+            "espacios_ausentes": 2,
+            "puntuacion_erronea": 744,
+            "letras_confundidas": 2729,
+            "lineas_fragmentadas": 280,
+            "texto_ilegible": 4162
+          },
+          "total_errores": 14215,
+          "tasa_error_porcentaje": 19.99,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19290829_00000.txt",
+          "lineas": 447,
+          "palabras": 37714,
+          "caracteres": 225437,
+          "errores": {
+            "caracteres_raros": 1214,
+            "numeros_en_palabras": 1200,
+            "mayusculas_aleatorias": 275,
+            "espacios_ausentes": 2,
+            "puntuacion_erronea": 204,
+            "letras_confundidas": 2370,
+            "lineas_fragmentadas": 165,
+            "texto_ilegible": 976
+          },
+          "total_errores": 6406,
+          "tasa_error_porcentaje": 16.99,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19310607_00000.txt",
+          "lineas": 605,
+          "palabras": 47964,
+          "caracteres": 292441,
+          "errores": {
+            "caracteres_raros": 1443,
+            "numeros_en_palabras": 1847,
+            "mayusculas_aleatorias": 515,
+            "espacios_ausentes": 3,
+            "puntuacion_erronea": 262,
+            "letras_confundidas": 3188,
+            "lineas_fragmentadas": 248,
+            "texto_ilegible": 1496
+          },
+          "total_errores": 9002,
+          "tasa_error_porcentaje": 18.77,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19340221_00000.txt",
+          "lineas": 392,
+          "palabras": 44936,
+          "caracteres": 233520,
+          "errores": {
+            "caracteres_raros": 2120,
+            "numeros_en_palabras": 1371,
+            "mayusculas_aleatorias": 298,
+            "espacios_ausentes": 0,
+            "puntuacion_erronea": 361,
+            "letras_confundidas": 2319,
+            "lineas_fragmentadas": 132,
+            "texto_ilegible": 2001
+          },
+          "total_errores": 8602,
+          "tasa_error_porcentaje": 19.14,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19370107_00000.txt",
+          "lineas": 178,
+          "palabras": 11902,
+          "caracteres": 69631,
+          "errores": {
+            "caracteres_raros": 1109,
+            "numeros_en_palabras": 366,
+            "mayusculas_aleatorias": 226,
+            "espacios_ausentes": 3,
+            "puntuacion_erronea": 155,
+            "letras_confundidas": 751,
+            "lineas_fragmentadas": 37,
+            "texto_ilegible": 950
+          },
+          "total_errores": 3597,
+          "tasa_error_porcentaje": 30.22,
+          "calidad_estimada": "Mala"
+        },
+        {
+          "archivo": "19390326_00000.txt",
+          "lineas": 79,
+          "palabras": 8653,
+          "caracteres": 51462,
+          "errores": {
+            "caracteres_raros": 568,
+            "numeros_en_palabras": 270,
+            "mayusculas_aleatorias": 190,
+            "espacios_ausentes": 11,
+            "puntuacion_erronea": 72,
+            "letras_confundidas": 393,
+            "lineas_fragmentadas": 23,
+            "texto_ilegible": 506
+          },
+          "total_errores": 2033,
+          "tasa_error_porcentaje": 23.49,
+          "calidad_estimada": "Regular"
+        }
+      ]
+    },
+    "LA NACIÓN": {
+      "periodo": "1925-1936",
+      "muestras_analizadas": 10,
+      "tasa_error_promedio": 16.91,
+      "calidad_promedio": "Regular",
+      "errores_promedio": {
+        "caracteres_raros": 1378.8,
+        "numeros_en_palabras": 1383.5,
+        "mayusculas_aleatorias": 187.1,
+        "espacios_ausentes": 7.5,
+        "puntuacion_erronea": 276.0,
+        "letras_confundidas": 1907.4,
+        "lineas_fragmentadas": 187.0,
+        "texto_ilegible": 2269.7
+      },
+      "detalle_muestras": [
+        {
+          "archivo": "19251019_00000.txt",
+          "lineas": 490,
+          "palabras": 40023,
+          "caracteres": 196549,
+          "errores": {
+            "caracteres_raros": 1443,
+            "numeros_en_palabras": 933,
+            "mayusculas_aleatorias": 166,
+            "espacios_ausentes": 20,
+            "puntuacion_erronea": 310,
+            "letras_confundidas": 1852,
+            "lineas_fragmentadas": 185,
+            "texto_ilegible": 2286
+          },
+          "total_errores": 7195,
+          "tasa_error_porcentaje": 17.98,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19280528_00000.txt",
+          "lineas": 697,
+          "palabras": 56536,
+          "caracteres": 288052,
+          "errores": {
+            "caracteres_raros": 2302,
+            "numeros_en_palabras": 1240,
+            "mayusculas_aleatorias": 316,
+            "espacios_ausentes": 12,
+            "puntuacion_erronea": 524,
+            "letras_confundidas": 2642,
+            "lineas_fragmentadas": 275,
+            "texto_ilegible": 3184
+          },
+          "total_errores": 10495,
+          "tasa_error_porcentaje": 18.56,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19280901_00000.txt",
+          "lineas": 627,
+          "palabras": 38952,
+          "caracteres": 209573,
+          "errores": {
+            "caracteres_raros": 1936,
+            "numeros_en_palabras": 2882,
+            "mayusculas_aleatorias": 205,
+            "espacios_ausentes": 13,
+            "puntuacion_erronea": 410,
+            "letras_confundidas": 1957,
+            "lineas_fragmentadas": 171,
+            "texto_ilegible": 1937
+          },
+          "total_errores": 9511,
+          "tasa_error_porcentaje": 24.42,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19300627_00000.txt",
+          "lineas": 665,
+          "palabras": 43165,
+          "caracteres": 232617,
+          "errores": {
+            "caracteres_raros": 1637,
+            "numeros_en_palabras": 2073,
+            "mayusculas_aleatorias": 199,
+            "espacios_ausentes": 4,
+            "puntuacion_erronea": 264,
+            "letras_confundidas": 2327,
+            "lineas_fragmentadas": 168,
+            "texto_ilegible": 2012
+          },
+          "total_errores": 8684,
+          "tasa_error_porcentaje": 20.12,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19301127_00000.txt",
+          "lineas": 862,
+          "palabras": 88675,
+          "caracteres": 238746,
+          "errores": {
+            "caracteres_raros": 1201,
+            "numeros_en_palabras": 1411,
+            "mayusculas_aleatorias": 85,
+            "espacios_ausentes": 7,
+            "puntuacion_erronea": 216,
+            "letras_confundidas": 1437,
+            "lineas_fragmentadas": 330,
+            "texto_ilegible": 4476
+          },
+          "total_errores": 9163,
+          "tasa_error_porcentaje": 10.33,
+          "calidad_estimada": "Buena"
+        },
+        {
+          "archivo": "19330805_00000.txt",
+          "lineas": 613,
+          "palabras": 67298,
+          "caracteres": 212459,
+          "errores": {
+            "caracteres_raros": 1564,
+            "numeros_en_palabras": 841,
+            "mayusculas_aleatorias": 112,
+            "espacios_ausentes": 5,
+            "puntuacion_erronea": 256,
+            "letras_confundidas": 1185,
+            "lineas_fragmentadas": 187,
+            "texto_ilegible": 3415
+          },
+          "total_errores": 7565,
+          "tasa_error_porcentaje": 11.24,
+          "calidad_estimada": "Buena"
+        },
+        {
+          "archivo": "19340412_00000.txt",
+          "lineas": 411,
+          "palabras": 35896,
+          "caracteres": 193196,
+          "errores": {
+            "caracteres_raros": 984,
+            "numeros_en_palabras": 780,
+            "mayusculas_aleatorias": 220,
+            "espacios_ausentes": 4,
+            "puntuacion_erronea": 179,
+            "letras_confundidas": 2086,
+            "lineas_fragmentadas": 130,
+            "texto_ilegible": 1213
+          },
+          "total_errores": 5596,
+          "tasa_error_porcentaje": 15.59,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19350107_00000.txt",
+          "lineas": 387,
+          "palabras": 33899,
+          "caracteres": 184800,
+          "errores": {
+            "caracteres_raros": 836,
+            "numeros_en_palabras": 1104,
+            "mayusculas_aleatorias": 202,
+            "espacios_ausentes": 5,
+            "puntuacion_erronea": 144,
+            "letras_confundidas": 1841,
+            "lineas_fragmentadas": 109,
+            "texto_ilegible": 1163
+          },
+          "total_errores": 5404,
+          "tasa_error_porcentaje": 15.94,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19350131_00000.txt",
+          "lineas": 451,
+          "palabras": 33574,
+          "caracteres": 178605,
+          "errores": {
+            "caracteres_raros": 931,
+            "numeros_en_palabras": 1360,
+            "mayusculas_aleatorias": 215,
+            "espacios_ausentes": 4,
+            "puntuacion_erronea": 210,
+            "letras_confundidas": 1821,
+            "lineas_fragmentadas": 162,
+            "texto_ilegible": 1349
+          },
+          "total_errores": 6052,
+          "tasa_error_porcentaje": 18.03,
+          "calidad_estimada": "Regular"
+        },
+        {
+          "archivo": "19360313_00000.txt",
+          "lineas": 373,
+          "palabras": 37273,
+          "caracteres": 190912,
+          "errores": {
+            "caracteres_raros": 954,
+            "numeros_en_palabras": 1211,
+            "mayusculas_aleatorias": 151,
+            "espacios_ausentes": 1,
+            "puntuacion_erronea": 247,
+            "letras_confundidas": 1926,
+            "lineas_fragmentadas": 153,
+            "texto_ilegible": 1662
+          },
+          "total_errores": 6305,
+          "tasa_error_porcentaje": 16.92,
+          "calidad_estimada": "Regular"
+        }
+      ]
+    }
+  }
+}

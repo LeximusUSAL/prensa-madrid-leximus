@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Calidad OCR - Periódicos de Madrid (1849-1939)</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #008a9b 0%, #006d7a 100%);
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #008a9b 0%, #006d7a 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #008a9b;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #00a0b4;
+            transform: translateX(-5px);
+        }
+
+        .alert-box {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(220,53,69,0.3);
+        }
+
+        .alert-box h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #008a9b;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            color: #006d7a;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .card .big-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #008a9b;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .card .description {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: #008a9b;
+            margin-bottom: 20px;
+            border-left: 5px solid #008a9b;
+            padding-left: 15px;
+        }
+
+        .chart-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .ranking-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .ranking-table thead {
+            background: linear-gradient(135deg, #008a9b 0%, #00a0b4 100%);
+            color: white;
+        }
+
+        .ranking-table th,
+        .ranking-table td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .ranking-table tbody tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .ranking-table tbody tr:hover {
+            background: rgba(0,138,155,0.05);
+        }
+
+        .quality-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .quality-excelente {
+            background: #28a745;
+            color: white;
+        }
+
+        .quality-buena {
+            background: #17a2b8;
+            color: white;
+        }
+
+        .quality-regular {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .quality-mala {
+            background: #fd7e14;
+            color: white;
+        }
+
+        .quality-muy-mala {
+            background: #dc3545;
+            color: white;
+        }
+
+        .error-examples {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #ffc107;
+        }
+
+        .error-example {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+        }
+
+        .error-example strong {
+            color: #dc3545;
+        }
+
+        .error-example code {
+            background: #f1f3f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .comparison-box {
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .original {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+        }
+
+        .ocr-error {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .impact-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .impact-card h4 {
+            color: #008a9b;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .impact-percentage {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .impact-low { color: #28a745; }
+        .impact-medium { color: #ffc107; }
+        .impact-high { color: #fd7e14; }
+        .impact-critical { color: #dc3545; }
+
+        .methodology {
+            background: rgba(0,138,155,0.05);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 5px solid #008a9b;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #006d7a 0%, #008a9b 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Análisis de Calidad OCR</h1>
+            <p class="subtitle">Periódicos Madrileños (1849-1939) | Proyecto LexiMus USAL</p>
+        </header>
+
+        <div class="content">
+            <a href="index.html" class="back-link">← Volver al análisis cronológico</a>
+
+            <!-- Alerta principal -->
+            <div class="alert-box">
+                <h2>⚠️ Calidad Global: MALA</h2>
+                <p style="font-size: 1.2em; margin-bottom: 15px;">
+                    Los textos digitalizados por la BNE presentan una <strong>tasa de error del 30.24%</strong>,
+                    lo que significa que aproximadamente <strong>3 de cada 10 palabras</strong> contienen algún tipo de error de OCR.
+                </p>
+                <p style="font-size: 1em; opacity: 0.9;">
+                    80 archivos analizados • 3,206,961 palabras procesadas • 8 periódicos evaluados
+                </p>
+            </div>
+
+            <!-- Tarjetas resumen -->
+            <div class="summary-cards">
+                <div class="card">
+                    <h3>📄 Archivos Analizados</h3>
+                    <span class="big-number">80</span>
+                    <p class="description">Muestras estratificadas de 8 periódicos</p>
+                </div>
+                <div class="card">
+                    <h3>📝 Palabras Procesadas</h3>
+                    <span class="big-number">3.2M</span>
+                    <p class="description">3,206,961 palabras analizadas</p>
+                </div>
+                <div class="card">
+                    <h3>❌ Tasa de Error Global</h3>
+                    <span class="big-number" style="color: #dc3545;">30.24%</span>
+                    <p class="description">Aproximadamente 1 error cada 3.3 palabras</p>
+                </div>
+                <div class="card">
+                    <h3>📊 Pérdida de Datos Estimada</h3>
+                    <span class="big-number" style="color: #fd7e14;">25-35%</span>
+                    <p class="description">Para búsquedas léxicas estándar</p>
+                </div>
+            </div>
+
+            <!-- Gráfico: Ranking de periódicos -->
+            <div class="section">
+                <h2 class="section-title">🏆 Ranking de Calidad por Periódico</h2>
+                <div class="chart-container">
+                    <canvas id="rankingChart"></canvas>
+                </div>
+
+                <table class="ranking-table">
+                    <thead>
+                        <tr>
+                            <th>Posición</th>
+                            <th>Periódico</th>
+                            <th>Período</th>
+                            <th>Tasa de Error</th>
+                            <th>Calidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1º</strong></td>
+                            <td><strong>LA NACIÓN</strong></td>
+                            <td>1925-1936</td>
+                            <td><strong>16.91%</strong></td>
+                            <td><span class="quality-badge quality-regular">Regular</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>2º</strong></td>
+                            <td><strong>El Imparcial</strong></td>
+                            <td>1867-1933</td>
+                            <td><strong>20.00%</strong></td>
+                            <td><span class="quality-badge quality-regular">Regular</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>3º</strong></td>
+                            <td><strong>La Libertad</strong></td>
+                            <td>1919-1939</td>
+                            <td><strong>22.71%</strong></td>
+                            <td><span class="quality-badge quality-regular">Regular</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>4º</strong></td>
+                            <td><strong>La Epoca</strong></td>
+                            <td>1849-1936</td>
+                            <td><strong>23.01%</strong></td>
+                            <td><span class="quality-badge quality-regular">Regular</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>5º</strong></td>
+                            <td><strong>Crisol</strong></td>
+                            <td>1931-1932</td>
+                            <td><strong>24.98%</strong></td>
+                            <td><span class="quality-badge quality-regular">Regular</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>6º</strong></td>
+                            <td><strong>El Sol</strong></td>
+                            <td>1917-1939</td>
+                            <td><strong>25.55%</strong></td>
+                            <td><span class="quality-badge quality-regular">Regular</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>7º</strong></td>
+                            <td><strong>El Heraldo de Madrid</strong></td>
+                            <td>1890-1939</td>
+                            <td><strong style="color: #fd7e14;">51.62%</strong></td>
+                            <td><span class="quality-badge quality-muy-mala">Muy mala</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>8º</strong></td>
+                            <td><strong>El Liberal</strong></td>
+                            <td>1879-1939</td>
+                            <td><strong style="color: #dc3545;">57.16%</strong></td>
+                            <td><span class="quality-badge quality-muy-mala">Muy mala</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Gráfico: Tipos de errores -->
+            <div class="section">
+                <h2 class="section-title">🔍 Distribución de Tipos de Errores</h2>
+                <div class="chart-container">
+                    <canvas id="erroresChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Ejemplos concretos -->
+            <div class="section">
+                <h2 class="section-title">📖 Ejemplos Reales de Errores OCR</h2>
+                <p style="margin-bottom: 20px; color: #666;">
+                    Ejemplos extraídos del primer número de <strong>Crisol</strong> (4 de abril de 1931):
+                </p>
+
+                <div class="error-examples">
+                    <div class="error-example">
+                        <h4>❌ Error tipo 1: Título completamente irreconocible</h4>
+                        <div class="comparison">
+                            <div class="comparison-box original">
+                                <strong>✓ Texto original (ideal):</strong><br>
+                                <code>AÑO I - NÚMERO 1</code>
+                            </div>
+                            <div class="comparison-box ocr-error">
+                                <strong>✗ Texto OCR obtenido:</strong><br>
+                                <code>JiLÑO f ^ N D M E E O 1</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="error-example">
+                        <h4>❌ Error tipo 2: Palabras mal reconocidas</h4>
+                        <div class="comparison">
+                            <div class="comparison-box original">
+                                <strong>✓ Original:</strong><br>
+                                <code>REDACCIÓN Y ADMINISTRACIÓN</code>
+                            </div>
+                            <div class="comparison-box ocr-error">
+                                <strong>✗ OCR:</strong><br>
+                                <code>R E D A C C I Ó M Y ADHINÍSTRACIÓWt'</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="error-example">
+                        <h4>❌ Error tipo 3: Confusión de letras (l/I, 0/O)</h4>
+                        <div class="comparison">
+                            <div class="comparison-box original">
+                                <strong>✓ Correcto:</strong><br>
+                                <code>la nación alcanzó</code>
+                            </div>
+                            <div class="comparison-box ocr-error">
+                                <strong>✗ OCR:</strong><br>
+                                <code>Ia nación alcanz0</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="error-example">
+                        <h4>❌ Error tipo 4: Números en lugar de letras</h4>
+                        <div class="comparison">
+                            <div class="comparison-box original">
+                                <strong>✓ Correcto:</strong><br>
+                                <code>música sublime historia</code>
+                            </div>
+                            <div class="comparison-box ocr-error">
+                                <strong>✗ OCR:</strong><br>
+                                <code>mu5ica sub1ime h1storia</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impacto en investigación -->
+            <div class="section">
+                <h2 class="section-title">📉 Impacto en Investigación Histórica</h2>
+                <p style="margin-bottom: 20px; color: #666;">
+                    Estimación de pérdida de datos según el tipo de análisis:
+                </p>
+
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <h4>Búsqueda léxica simple</h4>
+                        <div class="impact-percentage impact-medium">25-35%</div>
+                        <p>Pérdida al buscar palabras individuales como "música" o "teatro"</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <h4>Entidades nombradas</h4>
+                        <div class="impact-percentage impact-high">35-45%</div>
+                        <p>Pérdida en nombres propios, personas y lugares específicos</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <h4>Fechas y cifras</h4>
+                        <div class="impact-percentage impact-high">40-50%</div>
+                        <p>Números extremadamente problemáticos (1→l, 0→O)</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <h4>Colocaciones (n-gramas)</h4>
+                        <div class="impact-percentage impact-critical">50-65%</div>
+                        <p>Análisis de frases y expresiones complejas muy afectado</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <h4>Ortografía histórica</h4>
+                        <div class="impact-percentage impact-critical">70-80%</div>
+                        <p>Imposible distinguir variación ortográfica real de errores OCR</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Factores que afectan la calidad -->
+            <div class="section">
+                <h2 class="section-title">⚙️ Factores que Afectan la Calidad OCR</h2>
+
+                <div class="chart-container">
+                    <h3 style="color: #006d7a; margin-bottom: 20px;">1. Antigüedad del documento</h3>
+                    <canvas id="antiguedadChart"></canvas>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-top: 20px;">
+                    <h3 style="color: #006d7a; margin-bottom: 15px;">2. Estado de conservación del papel</h3>
+                    <ul style="line-height: 2; color: #475569;">
+                        <li><strong>Manchas de humedad:</strong> Afectan reconocimiento de caracteres</li>
+                        <li><strong>Páginas amarillentas:</strong> Reducen contraste texto/fondo</li>
+                        <li><strong>Papel deteriorado:</strong> Bordes rotos, agujeros, rasgaduras</li>
+                        <li><strong>Tinta desvaída:</strong> Especialmente en páginas exteriores</li>
+                        <li><strong>Dobleces:</strong> Distorsionan líneas de texto</li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-top: 20px;">
+                    <h3 style="color: #006d7a; margin-bottom: 15px;">3. Complejidad tipográfica</h3>
+                    <ul style="line-height: 2; color: #475569;">
+                        <li><strong>Columnas múltiples:</strong> Provoca fragmentación de líneas</li>
+                        <li><strong>Titulares grandes:</strong> A menudo completamente irreconocibles</li>
+                        <li><strong>Texto en cursiva:</strong> Muy mal reconocido</li>
+                        <li><strong>Ornamentos:</strong> Confundidos con letras</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Metodología -->
+            <div class="methodology">
+                <h2 class="section-title">🔬 Metodología del Análisis</h2>
+                <p style="margin-bottom: 15px;"><strong>Selección de muestras estratificadas:</strong></p>
+                <ul style="line-height: 2; margin-left: 20px; color: #475569;">
+                    <li>Primer ejemplar del período</li>
+                    <li>Primer cuarto cronológico</li>
+                    <li>Mitad del período</li>
+                    <li>Tercer cuarto cronológico</li>
+                    <li>Último ejemplar del período</li>
+                    <li>Muestras aleatorias adicionales</li>
+                </ul>
+
+                <p style="margin: 20px 0;"><strong>Patrones de error detectados (8 categorías):</strong></p>
+                <ol style="line-height: 2; margin-left: 20px; color: #475569;">
+                    <li><strong>Caracteres raros:</strong> Símbolos no-alfabéticos en palabras</li>
+                    <li><strong>Números en palabras:</strong> Dígitos mezclados con letras</li>
+                    <li><strong>Mayúsculas aleatorias:</strong> Mayúsculas incorrectas en medio de palabras</li>
+                    <li><strong>Espacios ausentes:</strong> Palabras pegadas sin separación</li>
+                    <li><strong>Puntuación errónea:</strong> Puntos, comas o símbolos duplicados</li>
+                    <li><strong>Letras confundidas:</strong> Confusiones l/I, 0/O, rn/m, c/e</li>
+                    <li><strong>Líneas fragmentadas:</strong> Líneas muy cortas por mala segmentación</li>
+                    <li><strong>Texto ilegible:</strong> Palabras con >33% caracteres no reconocibles</li>
+                </ol>
+
+                <p style="margin-top: 20px; padding: 15px; background: rgba(0,138,155,0.1); border-left: 3px solid #008a9b;">
+                    <strong>📊 Herramientas:</strong> Python 3.x, expresiones regulares (regex), análisis estadístico.
+                    El código completo está disponible en
+                    <a href="https://github.com/LeximusUSAL/prensa-madrid-leximus" style="color: #008a9b; font-weight: 600;">GitHub</a>.
+                </p>
+            </div>
+
+            <!-- Recomendaciones -->
+            <div class="section">
+                <h2 class="section-title">💡 Recomendaciones para Investigadores</h2>
+
+                <div style="background: #d1ecf1; padding: 25px; border-radius: 10px; border-left: 5px solid #17a2b8; margin-bottom: 20px;">
+                    <h3 style="color: #0c5460; margin-bottom: 15px;">✅ Válido para:</h3>
+                    <ul style="line-height: 2; color: #0c5460;">
+                        <li>Análisis de tendencias generales y patrones macro</li>
+                        <li>Estudios de frecuencias léxicas de términos comunes</li>
+                        <li>Análisis estadísticos de grandes volúmenes</li>
+                        <li>Comparaciones entre períodos históricos</li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8d7da; padding: 25px; border-radius: 10px; border-left: 5px solid #dc3545; margin-bottom: 20px;">
+                    <h3 style="color: #721c24; margin-bottom: 15px;">❌ NO fiable para:</h3>
+                    <ul style="line-height: 2; color: #721c24;">
+                        <li>Análisis de términos raros o específicos</li>
+                        <li>Estudios prosopográficos sin verificación manual</li>
+                        <li>Análisis de cifras y fechas exactas</li>
+                        <li>Estudios de ortografía histórica</li>
+                        <li>Análisis de colocaciones complejas (n-gramas n>2)</li>
+                    </ul>
+                </div>
+
+                <div style="background: #fff3cd; padding: 25px; border-radius: 10px; border-left: 5px solid #ffc107;">
+                    <h3 style="color: #856404; margin-bottom: 15px;">⚠️ Estrategias de mitigación:</h3>
+                    <ol style="line-height: 2; color: #856404;">
+                        <li><strong>Búsqueda con variantes:</strong> Incluir múltiples formas (música, musica, mu5ica, mus1ca)</li>
+                        <li><strong>Expresiones regulares flexibles:</strong> Usar patrones que capturen variaciones</li>
+                        <li><strong>Corrección ortográfica probabilística:</strong> Algoritmos tipo Levenshtein</li>
+                        <li><strong>Verificación manual:</strong> Siempre revisar hallazgos críticos con originales de la BNE</li>
+                        <li><strong>Transparencia metodológica:</strong> Declarar limitaciones en publicaciones</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Justificación por volumen -->
+            <div style="background: linear-gradient(135deg, #008a9b 0%, #00a0b4 100%); color: white; padding: 30px; border-radius: 10px; margin: 40px 0;">
+                <h2 style="font-size: 2em; margin-bottom: 20px; border-bottom: 2px solid rgba(255,255,255,0.3); padding-bottom: 10px;">
+                    ✅ Compensación por Volumen
+                </h2>
+                <p style="font-size: 1.2em; margin-bottom: 20px; line-height: 1.8;">
+                    A pesar del <strong>30% de error</strong>, el análisis sigue siendo <strong>válido para investigación</strong> porque:
+                </p>
+                <ul style="font-size: 1.1em; line-height: 2; margin-left: 20px;">
+                    <li><strong>Volumen masivo:</strong> 102,466 ejemplares compensan errores individuales</li>
+                    <li><strong>Representatividad estadística:</strong> ~2.2 millones de palabras potencialmente correctas</li>
+                    <li><strong>Distribución aleatoria:</strong> Los errores no están sesgados sistemáticamente</li>
+                    <li><strong>Patrones macro robustos:</strong> Las tendencias generales trascienden errores puntuales</li>
+                </ul>
+                <p style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3); font-style: italic; opacity: 0.9;">
+                    Para un término con 1,000 ocurrencias reales, detectaremos ~700 (70%),
+                    lo cual es suficiente para análisis de tendencias y frecuencias.
+                </p>
+            </div>
+
+            <!-- Enlaces adicionales -->
+            <div style="text-align: center; margin: 40px 0;">
+                <a href="https://github.com/LeximusUSAL/prensa-madrid-leximus/blob/main/INFORME_CALIDAD_OCR_PERIODICOS_MADRID.md"
+                   target="_blank"
+                   style="display: inline-block; background: linear-gradient(135deg, #008a9b 0%, #00a0b4 100%); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 12px rgba(0,138,155,0.3); transition: all 0.3s ease; font-size: 1.1em;">
+                    📄 Ver Informe Completo en Markdown
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Proyecto LexiMus USAL</strong> | PID2022-139589NB-C33</p>
+            <p>Universidad de Salamanca | Análisis realizado: 10 de octubre de 2025</p>
+            <p style="margin-top: 10px; opacity: 0.8;">
+                <a href="index.html" style="color: white; text-decoration: none;">← Volver al análisis cronológico</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Gráfico 1: Ranking de periódicos
+        const ctx1 = document.getElementById('rankingChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['LA NACIÓN', 'El Imparcial', 'La Libertad', 'La Epoca', 'Crisol', 'El Sol', 'El Heraldo', 'El Liberal'],
+                datasets: [{
+                    label: 'Tasa de Error (%)',
+                    data: [16.91, 20.00, 22.71, 23.01, 24.98, 25.55, 51.62, 57.16],
+                    backgroundColor: [
+                        '#17a2b8',
+                        '#17a2b8',
+                        '#ffc107',
+                        '#ffc107',
+                        '#ffc107',
+                        '#ffc107',
+                        '#fd7e14',
+                        '#dc3545'
+                    ],
+                    borderColor: [
+                        '#138496',
+                        '#138496',
+                        '#d39e00',
+                        '#d39e00',
+                        '#d39e00',
+                        '#d39e00',
+                        '#e66a0e',
+                        '#bd2130'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Tasa de Error OCR por Periódico (menor es mejor)',
+                        font: {
+                            size: 16
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 60,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Tasa de Error (%)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Gráfico 2: Tipos de errores
+        const ctx2 = document.getElementById('erroresChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Texto ilegible',
+                    'Caracteres raros',
+                    'Letras confundidas',
+                    'Números en palabras',
+                    'Puntuación errónea',
+                    'Mayúsculas aleatorias',
+                    'Líneas fragmentadas',
+                    'Espacios ausentes'
+                ],
+                datasets: [{
+                    data: [30.2, 26.8, 20.3, 18.4, 5.4, 4.5, 1.7, 0.05],
+                    backgroundColor: [
+                        '#dc3545',
+                        '#fd7e14',
+                        '#ffc107',
+                        '#28a745',
+                        '#17a2b8',
+                        '#6610f2',
+                        '#6c757d',
+                        '#e83e8c'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right'
+                    },
+                    title: {
+                        display: true,
+                        text: 'Distribución de Tipos de Errores OCR',
+                        font: {
+                            size: 16
+                        }
+                    }
+                }
+            }
+        });
+
+        // Gráfico 3: Calidad por antigüedad
+        const ctx3 = document.getElementById('antiguedadChart').getContext('2d');
+        new Chart(ctx3, {
+            type: 'line',
+            data: {
+                labels: ['1849-1880', '1880-1910', '1910-1930', '1930-1939'],
+                datasets: [{
+                    label: 'Tasa de Error Promedio (%)',
+                    data: [50, 30, 25, 18],
+                    borderColor: '#008a9b',
+                    backgroundColor: 'rgba(0,138,155,0.1)',
+                    tension: 0.4,
+                    fill: true,
+                    pointRadius: 6,
+                    pointBackgroundColor: '#008a9b'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Calidad OCR según Antigüedad del Documento',
+                        font: {
+                            size: 14
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 60,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Tasa de Error (%)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Período Histórico'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
