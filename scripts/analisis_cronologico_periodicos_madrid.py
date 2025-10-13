@@ -18,7 +18,12 @@ periodicos = {
     "El Liberal": {"inicio": "15/07/1879", "fin": "26/03/1939", "ejemplares": 19840},
     "La Época": {"inicio": "01/04/1849", "fin": "31/03/1936", "ejemplares": 28854},
     "La Libertad (1919)": {"inicio": "21/12/1919", "fin": "26/03/1939", "ejemplares": 5902},
-    "La Nación": {"inicio": "19/10/1925", "fin": "13/03/1936", "ejemplares": 3105}
+    "La Nación": {"inicio": "19/10/1925", "fin": "13/03/1936", "ejemplares": 3105},
+    "Ahora": {"inicio": "16/12/1930", "fin": "05/12/1938", "ejemplares": 2186},
+    "La Acción": {"inicio": "28/02/1916", "fin": "21/05/1924", "ejemplares": 2755},
+    "La Voz": {"inicio": "01/07/1920", "fin": "27/03/1939", "ejemplares": 5358},
+    "Luz": {"inicio": "07/01/1932", "fin": "07/09/1934", "ejemplares": 827},
+    "La Correspondencia de España": {"inicio": "02/01/1860", "fin": "27/06/1925", "ejemplares": 23302}
 }
 
 def parse_date(date_str):
@@ -223,10 +228,12 @@ resultados = {
     }
 }
 
-with open('/Users/maria/analisis_cronologico_periodicos_madrid.json', 'w', encoding='utf-8') as f:
+import os
+output_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'resultados', 'analisis_cronologico_periodicos_madrid.json')
+with open(output_path, 'w', encoding='utf-8') as f:
     json.dump(resultados, f, ensure_ascii=False, indent=2)
 
 print()
 print("=" * 80)
-print("✓ Análisis guardado en: analisis_cronologico_periodicos_madrid.json")
+print(f"✓ Análisis guardado en: {output_path}")
 print("=" * 80)

@@ -1,5 +1,5 @@
 {
-  "total_periodicos": 8,
+  "total_periodicos": 13,
   "arco_cronologico_completo": {
     "inicio": "01/04/1849",
     "fin": "27/03/1939",
@@ -53,16 +53,47 @@
       "fin": "13/03/1936",
       "duracion_anios": 10.4,
       "ejemplares": 3105
+    },
+    "Ahora": {
+      "inicio": "16/12/1930",
+      "fin": "05/12/1938",
+      "duracion_anios": 8.0,
+      "ejemplares": 2186
+    },
+    "La Acción": {
+      "inicio": "28/02/1916",
+      "fin": "21/05/1924",
+      "duracion_anios": 8.2,
+      "ejemplares": 2755
+    },
+    "La Voz": {
+      "inicio": "01/07/1920",
+      "fin": "27/03/1939",
+      "duracion_anios": 18.7,
+      "ejemplares": 5358
+    },
+    "Luz": {
+      "inicio": "07/01/1932",
+      "fin": "07/09/1934",
+      "duracion_anios": 2.7,
+      "ejemplares": 827
+    },
+    "La Correspondencia de España": {
+      "inicio": "02/01/1860",
+      "fin": "27/06/1925",
+      "duracion_anios": 65.5,
+      "ejemplares": 23302
     }
   },
-  "total_ejemplares_digitalizados": 102466,
-  "periodicos_con_ejemplares": 8,
+  "total_ejemplares_digitalizados": 136894,
+  "periodicos_con_ejemplares": 13,
   "periodo_maxima_coincidencia": {
-    "nivel_coincidencia": 8,
+    "nivel_coincidencia": 10,
     "inicio": "01/01/1931",
-    "fin": "31/12/1931",
-    "duracion_anios": 1,
+    "fin": "31/12/1932",
+    "duracion_anios": 2,
     "periodicos_activos": [
+      "Ahora",
       "Crisol",
       "El Heraldo de Madrid",
       "El Imparcial",
@@ -70,6 +101,7 @@
       "El Sol",
       "La Libertad (1919)",
       "La Nación",
+      "La Voz",
       "La Época"
     ]
   }
