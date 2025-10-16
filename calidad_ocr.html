@@ -328,11 +328,11 @@
             <div class="alert-box">
                 <h2>⚠️ Calidad Global: MALA</h2>
                 <p style="font-size: 1.2em; margin-bottom: 15px;">
-                    Los textos digitalizados por la BNE presentan una <strong>tasa de error del 30.24%</strong>,
+                    Los textos digitalizados por la BNE presentan una <strong>tasa de error del 30.02%</strong>,
                     lo que significa que aproximadamente <strong>3 de cada 10 palabras</strong> contienen algún tipo de error de OCR.
                 </p>
                 <p style="font-size: 1em; opacity: 0.9;">
-                    80 archivos analizados • 3,206,961 palabras procesadas • 8 periódicos evaluados
+                    90 archivos analizados • 3,549,915 palabras procesadas • 9 periódicos evaluados
                 </p>
             </div>
 
@@ -340,17 +340,17 @@
             <div class="summary-cards">
                 <div class="card">
                     <h3>📄 Archivos Analizados</h3>
-                    <span class="big-number">80</span>
-                    <p class="description">Muestras estratificadas de 8 periódicos</p>
+                    <span class="big-number">90</span>
+                    <p class="description">Muestras estratificadas de 9 periódicos</p>
                 </div>
                 <div class="card">
                     <h3>📝 Palabras Procesadas</h3>
-                    <span class="big-number">3.2M</span>
-                    <p class="description">3,206,961 palabras analizadas</p>
+                    <span class="big-number">3.5M</span>
+                    <p class="description">3,549,915 palabras analizadas</p>
                 </div>
                 <div class="card">
                     <h3>❌ Tasa de Error Global</h3>
-                    <span class="big-number" style="color: #dc3545;">30.24%</span>
+                    <span class="big-number" style="color: #dc3545;">30.02%</span>
                     <p class="description">Aproximadamente 1 error cada 3.3 palabras</p>
                 </div>
                 <div class="card">
@@ -422,13 +422,20 @@
                         </tr>
                         <tr>
                             <td><strong>7º</strong></td>
+                            <td><strong>La Voz</strong></td>
+                            <td>1920</td>
+                            <td><strong>28.27%</strong></td>
+                            <td><span class="quality-badge quality-regular">Regular</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>8º</strong></td>
                             <td><strong>El Heraldo de Madrid</strong></td>
                             <td>1890-1939</td>
                             <td><strong style="color: #fd7e14;">51.62%</strong></td>
                             <td><span class="quality-badge quality-muy-mala">Muy mala</span></td>
                         </tr>
                         <tr>
-                            <td><strong>8º</strong></td>
+                            <td><strong>9º</strong></td>
                             <td><strong>El Liberal</strong></td>
                             <td>1879-1939</td>
                             <td><strong style="color: #dc3545;">57.16%</strong></td>
@@ -661,8 +668,8 @@
                     A pesar del <strong>30% de error</strong>, el análisis sigue siendo <strong>válido para investigación</strong> porque:
                 </p>
                 <ul style="font-size: 1.1em; line-height: 2; margin-left: 20px;">
-                    <li><strong>Volumen masivo:</strong> 102,466 ejemplares compensan errores individuales</li>
-                    <li><strong>Representatividad estadística:</strong> ~2.2 millones de palabras potencialmente correctas</li>
+                    <li><strong>Volumen masivo:</strong> Miles de ejemplares compensan errores individuales</li>
+                    <li><strong>Representatividad estadística:</strong> ~2.5 millones de palabras potencialmente correctas</li>
                     <li><strong>Distribución aleatoria:</strong> Los errores no están sesgados sistemáticamente</li>
                     <li><strong>Patrones macro robustos:</strong> Las tendencias generales trascienden errores puntuales</li>
                 </ul>
@@ -697,13 +704,14 @@
         new Chart(ctx1, {
             type: 'bar',
             data: {
-                labels: ['LA NACIÓN', 'El Imparcial', 'La Libertad', 'La Epoca', 'Crisol', 'El Sol', 'El Heraldo', 'El Liberal'],
+                labels: ['LA NACIÓN', 'El Imparcial', 'La Libertad', 'La Epoca', 'Crisol', 'El Sol', 'La Voz', 'El Heraldo', 'El Liberal'],
                 datasets: [{
                     label: 'Tasa de Error (%)',
-                    data: [16.91, 20.00, 22.71, 23.01, 24.98, 25.55, 51.62, 57.16],
+                    data: [16.91, 20.00, 22.71, 23.01, 24.98, 25.55, 28.27, 51.62, 57.16],
                     backgroundColor: [
                         '#17a2b8',
                         '#17a2b8',
+                        '#ffc107',
                         '#ffc107',
                         '#ffc107',
                         '#ffc107',
@@ -714,6 +722,7 @@
                     borderColor: [
                         '#138496',
                         '#138496',
+                        '#d39e00',
                         '#d39e00',
                         '#d39e00',
                         '#d39e00',

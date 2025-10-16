@@ -1,0 +1,206 @@
+{
+  "periodico": "La Voz",
+  "estadisticas_globales": {
+    "total_archivos_analizados": 10,
+    "total_palabras_analizadas": 342954,
+    "total_lineas_analizadas": 10
+  },
+  "resultados": {
+    "periodo": "1920",
+    "muestras_analizadas": 10,
+    "tasa_error_promedio": 28.27,
+    "calidad_promedio": "Regular",
+    "errores_promedio": {
+      "caracteres_raros": 2810.4,
+      "numeros_en_palabras": 1503.3,
+      "mayusculas_aleatorias": 227.5,
+      "espacios_ausentes": 3.1,
+      "puntuacion_erronea": 745.6,
+      "letras_confundidas": 2143.1,
+      "lineas_fragmentadas": 0.0,
+      "texto_ilegible": 2238.1
+    },
+    "detalle_muestras": [
+      {
+        "archivo": "La-Voz-Madrid-1-10-1920.pdf",
+        "lineas": 1,
+        "palabras": 35042,
+        "errores": {
+          "caracteres_raros": 3242,
+          "numeros_en_palabras": 2236,
+          "mayusculas_aleatorias": 239,
+          "espacios_ausentes": 3,
+          "puntuacion_erronea": 962,
+          "letras_confundidas": 2138,
+          "lineas_fragmentadas": 0,
+          "texto_ilegible": 2635
+        },
+        "total_errores": 11455,
+        "tasa_error_porcentaje": 32.69,
+        "calidad_estimada": "Mala"
+      },
+      {
+        "archivo": "La-Voz-Madrid-16-12-1920.pdf",
+        "lineas": 1,
+        "palabras": 32515,
+        "errores": {
+          "caracteres_raros": 4818,
+          "numeros_en_palabras": 2024,
+          "mayusculas_aleatorias": 517,
+          "espacios_ausentes": 5,
+          "puntuacion_erronea": 1106,
+          "letras_confundidas": 1865,
+          "lineas_fragmentadas": 0,
+          "texto_ilegible": 3503
+        },
+        "total_errores": 13838,
+        "tasa_error_porcentaje": 42.56,
+        "calidad_estimada": "Mala"
+      },
+      {
+        "archivo": "La-Voz-Madrid-19-8-1920.pdf",
+        "lineas": 1,
+        "palabras": 35339,
+        "errores": {
+          "caracteres_raros": 2532,
+          "numeros_en_palabras": 1450,
+          "mayusculas_aleatorias": 206,
+          "espacios_ausentes": 2,
+          "puntuacion_erronea": 699,
+          "letras_confundidas": 2135,
+          "lineas_fragmentadas": 0,
+          "texto_ilegible": 2091
+        },
+        "total_errores": 9115,
+        "tasa_error_porcentaje": 25.79,
+        "calidad_estimada": "Regular"
+      },
+      {
+        "archivo": "La-Voz-Madrid-22-10-1920.pdf",
+        "lineas": 1,
+        "palabras": 33196,
+        "errores": {
+          "caracteres_raros": 2265,
+          "numeros_en_palabras": 1091,
+          "mayusculas_aleatorias": 201,
+          "espacios_ausentes": 3,
+          "puntuacion_erronea": 686,
+          "letras_confundidas": 2110,
+          "lineas_fragmentadas": 0,
+          "texto_ilegible": 1965
+        },
+        "total_errores": 8321,
+        "tasa_error_porcentaje": 25.07,
+        "calidad_estimada": "Regular"
+      },
+      {
+        "archivo": "La-Voz-Madrid-22-7-1920.pdf",
+        "lineas": 1,
+        "palabras": 33407,
+        "errores": {
+          "caracteres_raros": 2594,
+          "numeros_en_palabras": 2408,
+          "mayusculas_aleatorias": 184,
+          "espacios_ausentes": 2,
+          "puntuacion_erronea": 654,
+          "letras_confundidas": 2040,
+          "lineas_fragmentadas": 0,
+          "texto_ilegible": 2092
+        },
+        "total_errores": 9974,
+        "tasa_error_porcentaje": 29.86,
+        "calidad_estimada": "Regular"
+      },
+      {
+        "archivo": "La-Voz-Madrid-24-11-1920.pdf",
+        "lineas": 1,
+        "palabras": 33612,
+        "errores": {
+          "caracteres_raros": 2325,
+          "numeros_en_palabras": 1167,
+          "mayusculas_aleatorias": 160,
+          "espacios_ausentes": 7,
+          "puntuacion_erronea": 609,
+          "letras_confundidas": 2096,
+          "lineas_fragmentadas": 0,
+          "texto_ilegible": 1849
+        },
+        "total_errores": 8213,
+        "tasa_error_porcentaje": 24.43,
+        "calidad_estimada": "Regular"
+      },
+      {
+        "archivo": "La-Voz-Madrid-25-11-1920.pdf",
+        "lineas": 1,
+        "palabras": 32520,
+        "errores": {
+          "caracteres_raros": 1883,
+          "numeros_en_palabras": 1370,
+          "mayusculas_aleatorias": 138,
+          "espacios_ausentes": 6,
+          "puntuacion_erronea": 607,
+          "letras_confundidas": 2107,
+          "lineas_fragmentadas": 0,
+          "texto_ilegible": 1664
+        },
+        "total_errores": 7775,
+        "tasa_error_porcentaje": 23.91,
+        "calidad_estimada": "Regular"
+      },
+      {
+        "archivo": "La-Voz-Madrid-3-9-1920.pdf",
+        "lineas": 1,
+        "palabras": 35705,
+        "errores": {
+          "caracteres_raros": 3312,
+          "numeros_en_palabras": 1371,
+          "mayusculas_aleatorias": 286,
+          "espacios_ausentes": 0,
+          "puntuacion_erronea": 827,
+          "letras_confundidas": 2286,
+          "lineas_fragmentadas": 0,
+          "texto_ilegible": 2453
+        },
+        "total_errores": 10535,
+        "tasa_error_porcentaje": 29.51,
+        "calidad_estimada": "Regular"
+      },
+      {
+        "archivo": "La-Voz-Madrid-9-8-1920.pdf",
+        "lineas": 1,
+        "palabras": 36314,
+        "errores": {
+          "caracteres_raros": 2512,
+          "numeros_en_palabras": 792,
+          "mayusculas_aleatorias": 182,
+          "espacios_ausentes": 2,
+          "puntuacion_erronea": 634,
+          "letras_confundidas": 2381,
+          "lineas_fragmentadas": 0,
+          "texto_ilegible": 1975
+        },
+        "total_errores": 8478,
+        "tasa_error_porcentaje": 23.35,
+        "calidad_estimada": "Regular"
+      },
+      {
+        "archivo": "La-Voz-Madrid-9-9-1920.pdf",
+        "lineas": 1,
+        "palabras": 35304,
+        "errores": {
+          "caracteres_raros": 2621,
+          "numeros_en_palabras": 1124,
+          "mayusculas_aleatorias": 162,
+          "espacios_ausentes": 1,
+          "puntuacion_erronea": 672,
+          "letras_confundidas": 2273,
+          "lineas_fragmentadas": 0,
+          "texto_ilegible": 2154
+        },
+        "total_errores": 9007,
+        "tasa_error_porcentaje": 25.51,
+        "calidad_estimada": "Regular"
+      }
+    ]
+  }
+}
