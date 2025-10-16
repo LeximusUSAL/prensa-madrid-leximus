@@ -6,7 +6,7 @@
 
 ## 📰 Descripción del Proyecto
 
-Este repositorio contiene el análisis cronológico y cuantitativo de **8 periódicos diarios generalistas** de Madrid publicados entre 1849 y 1939, con el objetivo de estudiar la **representatividad de la palabra "música"** en los medios de comunicación no especializados durante finales del siglo XIX y principios del XX.
+Este repositorio contiene el análisis cronológico y cuantitativo de **13 periódicos diarios generalistas** de Madrid publicados entre 1849 y 1939, con el objetivo de estudiar la **representatividad de la palabra "música"** en los medios de comunicación no especializados durante finales del siglo XIX y principios del XX.
 
 ### 🎯 Objetivos
 
@@ -27,20 +27,25 @@ A diferencia de nuestro análisis previo de **revistas musicales especializadas*
 | Periódico | Período de Publicación | Duración | Ejemplares Digitalizados |
 |-----------|------------------------|----------|-------------------------|
 | **La Época** | 01/04/1849 - 31/03/1936 | 87.0 años | **28,854** |
+| **La Correspondencia de España** | 02/01/1860 - 27/06/1925 | 65.5 años | **23,302** |
 | **El Imparcial** | 01/01/1867 - 30/05/1933 | 66.4 años | **23,008** |
 | **El Liberal** | 15/07/1879 - 26/03/1939 | 59.7 años | **19,840** |
 | **El Heraldo de Madrid** | 29/10/1890 - 26/03/1939 | 48.4 años | **15,583** |
+| **La Acción** | 28/02/1916 - 21/05/1924 | 8.2 años | **2,755** |
 | **El Sol** | 29/11/1917 - 27/03/1939 | 21.3 años | **5,972** |
 | **La Libertad** | 21/12/1919 - 26/03/1939 | 19.3 años | **5,902** |
+| **La Voz** | 01/07/1920 - 27/03/1939 | 18.7 años | **5,358** |
 | **La Nación** | 19/10/1925 - 13/03/1936 | 10.4 años | **3,105** |
+| **Ahora** | 16/12/1930 - 05/12/1938 | 8.0 años | **2,186** |
 | **Crisol** | 04/04/1931 - 06/01/1932 | 0.8 años | **202** |
+| **Luz** | 07/01/1932 - 07/09/1934 | 2.7 años | **827** |
 
 ### 📈 Estadísticas del Corpus
 
-- **Total de periódicos**: 8
+- **Total de periódicos**: 13
 - **Arco cronológico completo**: 1849-1939 (90 años)
-- **Ejemplares digitalizados totales**: **102,466** (8 periódicos, 100% del corpus)
-- **Período de máxima coincidencia**: Abril 1931 - Enero 1932 (9 meses, 8 periódicos activos)
+- **Ejemplares digitalizados totales**: **136,894** (13 periódicos, 100% del corpus)
+- **Período de máxima coincidencia**: 1931-1932 (2 años, 10 periódicos activos simultáneamente)
 - **Contexto histórico clave**: Segunda República Española (1931)
 
 ## 🔬 Metodología
@@ -60,7 +65,7 @@ Los archivos TXT fueron obtenidos de la **Biblioteca Nacional de España (BNE)**
 ### ✅ Compensación por Volumen
 
 A pesar de estas limitaciones, consideramos que el análisis es válido por:
-- **Enorme volumen de datos** (102,466 ejemplares)
+- **Enorme volumen de datos** (136,894 ejemplares)
 - **Análisis sistemático** de todo el corpus
 - **Representatividad estadística significativa**
 - **Patrones generales** que trascienden errores individuales
@@ -129,22 +134,27 @@ prensa-madrid-leximus/
 
 ### Período de Máxima Coincidencia
 
-**04/04/1931 - 06/01/1932** (9 meses)
+**1931-1932** (2 años)
 
-Este es el único período donde los **8 periódicos estuvieron activos simultáneamente**, coincidiendo con:
+Este es el período donde más periódicos estuvieron activos simultáneamente (**10 de 13 periódicos**), coincidiendo con:
 - Proclamación de la Segunda República Española (14 abril 1931)
 - Momento de máxima efervescencia periodística en Madrid
-- Auge de nuevas publicaciones republicanas (Crisol)
+- Auge de nuevas publicaciones republicanas (Crisol, Ahora, Luz)
 
 ### Distribución Temporal
 
 | Nivel de Coincidencia | Períodos |
 |----------------------|----------|
-| 8 periódicos | 1931 (1 año) |
-| 7 periódicos | 1926-1930, 1932 (6 años) |
-| 6 periódicos | 1920-1925, 1933-1935 (9 años) |
-| 5 periódicos | 1918-1919 (2 años) |
-| 4 periódicos | 1891-1917, 1936-1938 (30 años) |
+| 10 periódicos | 1931-1932 (2 años) |
+| 9 periódicos | 1920-1923, 1933-1934 (6 años) |
+| 8 periódicos | 1924, 1926-1930, 1935 (7 años) |
+| 7 periódicos | 1918-1919, 1925 (3 años) |
+| 6 periódicos | 1916-1917, 1936-1938 (5 años) |
+| 5 periódicos | 1891-1915 (25 años) |
+| 4 periódicos | 1880-1890 (11 años) |
+| 3 periódicos | 1867-1879 (13 años) |
+| 2 periódicos | 1860-1866 (7 años) |
+| 1 periódico | 1849-1859 (11 años) |
 
 ### Cese de Publicaciones
 
@@ -173,7 +183,7 @@ La **Guerra Civil Española (1936-1939)** marcó el cierre masivo de periódicos
 ### Corpus Previos Analizados
 
 1. **Revistas musicales especializadas** (1842-2024): 19 publicaciones, 25.8 millones de palabras
-2. **Prensa diaria generalista** (1849-1939): 8 periódicos madrileños [ESTE PROYECTO]
+2. **Prensa diaria generalista** (1849-1939): 13 periódicos madrileños, 136,894 ejemplares [ESTE PROYECTO]
 
 ## 📖 Publicaciones y Resultados
 
